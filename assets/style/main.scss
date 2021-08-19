@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,800;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+* {
+  font-family: 'Kanit', sans-serif;
+}
+
+.gradient {
+  background-image: linear-gradient(to right, #3794fc 0%, #0e64c6 100%);
+}
+.gradient-to-bottom {
+  background-image: linear-gradient(346deg, #0e64c6, #3794fc);
+}
+
+.browser-mockup {
+  border-top: 2em solid rgba(230, 230, 230, 0.7);
+  position: relative;
+  height: 60vh;
+}
+
+.browser-mockup:before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: -1.25em;
+  left: 1em;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background-color: #f44;
+  box-shadow: 0 0 0 2px #f44, 1.5em 0 0 2px #9b3, 3em 0 0 2px #fb5;
+}
+
+.browser-mockup > * {
+  display: block;
+}
+
+.bg-content {
+  background: #faf9ff;
+}
+
+.translate-x--20 {
+  transform: translateX(-20%);
+}
+
+.table-custom {
+  @apply w-full;
+  overflow-x: scroll;
+  table {
+    @apply w-full;
+    height: auto;
+    thead {
+      @apply bg-gray-100;
+      & > th {
+        @apply font-normal;
+        @apply text-gray-600;
+        @apply px-3;
+        @apply py-3;
+        @apply text-xs;
+        @apply text-left;
+      }
+    }
+  }
+}
+.table-custom tbody tr:hover {
+  @apply bg-gray-50;
+}
+.table-custom tbody tr td {
+  @apply py-2;
+  @apply px-3;
+  @apply text-gray-600;
+  @apply text-sm;
+}
+.table-custom tbody tr.tr-disable td {
+  @apply text-gray-400;
+}
+.table-custom tbody tr.tr-disable td a {
+  @apply text-gray-400;
+}
+
+.vm--modal {
+  border-radius: 0.5rem !important;
+}
+
+.w-max {
+  width: max-content;
+}
+.mt-0 {
+  margin-top: 0;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.w-72 {
+  width: 20rem;
+}
+
+.disabled-language {
+  @apply bg-gray-50;
+  @apply text-gray-300;
+  @apply cursor-not-allowed;
+  @apply pointer-events-none;
+}
+.active-language {
+  @apply bg-blue-100;
+  @apply text-primary;
+}
+
+.v-toast__icon {
+  margin-left: 1.5em !important;
+}
+.v-toast__text {
+  text-shadow: 1px 1px #00000022;
+  margin-right: 0.5em !important;
+}
+.v-toast__item--success {
+  background-color: #4caf50 !important;
+}
+
+.align-sub {
+  vertical-align: sub;
+}
+
+.max-w-12-rem {
+  max-width: 12rem;
+}

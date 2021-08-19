@@ -1,0 +1,15 @@
+#Host
+host: becookies.tech
+
+#Tag
+namespace: prod
+
+#Docker Image
+image: asia.gcr.io/rst-company/cookie-web-prod:master
+
+replicaCount: 1
+nodeSelector: default-pool
+
+#ENV
+api: https://core.becookies.tech
+previewUrl: https://core.becookies.tech/script.js

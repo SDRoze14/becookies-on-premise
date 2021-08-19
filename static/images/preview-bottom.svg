@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="548" height="393" viewBox="0 0 548 393">
+    <defs>
+        <filter id="ks51468wca" width="125.4%" height="138.3%" x="-12.7%" y="-19.1%" filterUnits="objectBoundingBox">
+            <feOffset dy="5" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="12.5"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <filter id="41kua64mcd">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 0.847000 0 0 0 0 0.847000 0 0 0 0 0.847000 0 0 0 1.000000 0"/>
+        </filter>
+        <rect id="ortoz4rjgb" width="460" height="305" x="0" y="0" rx="6"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g filter="url(#ks51468wca)" transform="translate(-716 -339) translate(178 298) translate(542) translate(40 85)">
+                        <mask id="r6lufn0gsc" fill="#fff">
+                            <use xlink:href="#ortoz4rjgb"/>
+                        </mask>
+                        <use fill="#FFF" stroke="#C0BFC0" stroke-width=".769" xlink:href="#ortoz4rjgb"/>
+                        <path fill="#EEF0F1" d="M0 0H459.473V20.513H0z" mask="url(#r6lufn0gsc)"/>
+                        <ellipse cx="13.767" cy="11.406" fill="#D8D8D8" mask="url(#r6lufn0gsc)" rx="5.163" ry="5.128"/>
+                        <ellipse cx="29.255" cy="11.406" fill="#D8D8D8" mask="url(#r6lufn0gsc)" rx="5.163" ry="5.128"/>
+                        <ellipse cx="44.743" cy="11.406" fill="#D8D8D8" mask="url(#r6lufn0gsc)" rx="5.163" ry="5.128"/>
+                        <g mask="url(#r6lufn0gsc)">
+                            <g>
+                                <path fill="#232323" d="M.7.85h456v94c0 3.314-2.686 6-6 6H6.7c-3.314 0-6-2.686-6-6v-94z" transform="translate(1.3 202.15)"/>
+                                <g>
+                                    <path fill="#1269CB" d="M10 0h45c5.523 0 10 4.477 10 10s-4.477 10-10 10H10C4.477 20 0 15.523 0 10S4.477 0 10 0z" transform="translate(1.3 202.15) translate(375.7 64.85)"/>
+                                    <text fill="#FFF" font-family="Kanit-Regular, Kanit" font-size="7" transform="translate(1.3 202.15) translate(375.7 64.85)">
+                                        <tspan x="21.412" y="12.5">Accept</tspan>
+                                    </text>
+                                </g>
+                                <g>
+                                    <path fill="#E6E6E6" d="M10 0h45c5.523 0 10 4.477 10 10s-4.477 10-10 10H10C4.477 20 0 15.523 0 10S4.477 0 10 0z" transform="translate(1.3 202.15) translate(302.7 64.85)"/>
+                                    <text fill="#57697B" font-family="Kanit-Regular, Kanit" font-size="7" transform="translate(1.3 202.15) translate(302.7 64.85)">
+                                        <tspan x="22.539" y="12.5">Reject</tspan>
+                                    </text>
+                                </g>
+                                <g filter="url(#41kua64mcd)" transform="translate(1.3 202.15)">
+                                    <g>
+                                        <path stroke="#1269CB" stroke-width=".5" d="M65 .25c2.692 0 5.13 1.091 6.894 2.856C73.66 4.87 74.75 7.308 74.75 10s-1.091 5.13-2.856 6.894C70.13 18.66 67.692 19.75 65 19.75h0-55c-2.692 0-5.13-1.091-6.894-2.856C1.34 15.13.25 12.692.25 10s1.091-5.13 2.856-6.894C4.87 1.34 7.308.25 10 .25h0z" transform="translate(16.7 64.85)"/>
+                                        <text fill="#1269CB" font-family="Kanit-Regular, Kanit" font-size="7" transform="translate(16.7 64.85)">
+                                            <tspan x="12.457" y="12.5">Cookies setting</tspan>
+                                        </text>
+                                    </g>
+                                </g>
+                                <text font-family="Kanit-Light, Kanit" font-size="7" font-weight="300" transform="translate(1.3 202.15)">
+                                    <tspan x="16.7" y="32.85" fill="#FFF">Our website uses cookies to improve your experience while navigating our website. </tspan>
+                                </text>
+                                <text font-family="Kanit-Light, Kanit" font-size="7" font-weight="300" text-decoration="underline" transform="translate(1.3 202.15)">
+                                    <tspan x="16.7" y="43.85" fill="#C0BFC0">Cookie Privacy Notice</tspan>
+                                </text>
+                                <text font-family="Kanit-Regular, Kanit" font-size="9" transform="translate(1.3 202.15)">
+                                    <tspan x="16.7" y="20.85" fill="#FFF">This website uses cookies</tspan>
+                                </text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

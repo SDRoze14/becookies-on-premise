@@ -1,0 +1,27 @@
+{
+  "sample": {
+    "acceptedCount": 0,
+    "applicationId": "15625740-a72f-11eb-8718-7bc4d8a02c01",
+    "applicationName": "test.com",
+    "confirmToken": "MC4xNzkxMzEyMDc0MjU2NTMyNQ==",
+    "cookieChanges": 0,
+    "cookieCounts": 0,
+    "createdAt": "2021-04-27T08:03:42.900Z",
+    "domainName": "test.com",
+    "email": "tester3@gmail.com",
+    "latestScan": "2021-04-27T08:03:42.900Z",
+    "name": "tester3@gmail.com",
+    "nextScan": "2021-05-27T08:03:42.900Z",
+    "organizationId": "155fbf30-a72f-11eb-8718-7bc4d8a02c01",
+    "pageCounts": 0,
+    "pageViews": 0,
+    "partialAcceptedCount": 0,
+    "rejectedCount": 0,
+    "scanFrequency": "30 days",
+    "script": "<script id=\"becookies.tech-scripts\" src=\"https://core.staging.becookies.tech/script.js\" data-id=\"15625740-a72f-11eb-8718-7bc4d8a02c01\" charset=\"utf-8\"></script>",
+    "status": "complete",
+    "subscriptionExpiredAt": "2024-01-22T08:03:42.883Z",
+    "updatedAt": "2021-04-27T08:03:42.900Z",
+    "userId": "7c26f33c-a46e-489d-81f1-c4944625489c"
+  }
+}

@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: "{{ .Chart.Name }}"
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+  name: "{{ .Chart.Name }}"
+  namespace: "{{required "A valid .Values.namespace entry required!" .Values.namespace }}"
+spec:
+  selector:
+    matchLabels:
+      app: "{{ .Chart.Name }}"
+  # replicas: {{ .Values.replicaCount }}
+  template:
+    metadata:
+      labels:
+        app: "{{ .Chart.Name }}"
+    spec:
+      nodeSelector:
+        cloud.google.com/gke-nodepool: "{{ .Values.nodeSelector }}"
+      containers:
+        - name: "{{ .Chart.Name }}"
+          image: "{{ .Values.image }}"
+          imagePullPolicy: "Always"
+          ports:
+            - containerPort: 3000
+          env:
+            - name: NODE_ENV
+              value: "production"
+            - name: API
+              value: "{{ .Values.api }}"
+            - name: PREVIEW_URL
+              value: "{{ .Values.previewUrl }}"

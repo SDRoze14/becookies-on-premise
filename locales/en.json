@@ -1,0 +1,391 @@
+{
+  "nav" : {
+    "home": "HOME",
+    "package": "PACKAGE",
+    "company": "COMPANY",
+    "about": "ABOUT US",
+    "contact": "CONTACT",
+    "faq": "FAQ",
+    "login": "Login",
+    "tryFree": "Try For Free",
+    "user": "Users",
+    "changePassword": "Change password"
+  },
+  "changePassword": "Do you want to change your password? If you want to change, click \"confirm\", the system will send URL for change password to email",
+  "term": "Term",
+  "policy": "Privacy",
+  "termCondition": "Terms & Conditions",
+  "privacyPolicy": "Privacy Notice",
+  "login": {},
+  "signup": {
+    "title": "Create Account",
+    "subtitle": "Apply today, use the \"FREE!! service until June 1st, 2022. According to the number of website visitors\"",
+    "subtitle2": "*A register email and domain must be the same as a website domain you would like to put a script on",
+    "labelName": "Your name",
+    "placeholderrName": "Enter your name",
+    "labelEmail": "Email address",
+    "placeholderrEmail": "eg. email@go.th",
+    "labelPassword": "Password",
+    "placeholderrPassword": "",
+    "labelConfirmPassword": "Confirm Password",
+    "placeholderrConfirmPassword": "",
+    "labelApplicationName": "Application Name",
+    "placeholderrApplicationName": "e.g. Example",
+    "labelDomain": "Domain Name",
+    "placeholderrDomain": "e.g. example.co.th",
+    "accept": "I accept the",
+    "comfirmation": "Your registration has been confirmed",
+    "labelOrganization": "Organization",
+    "placeholderOrganization": "Organization Name"
+  },
+  "stepUse": {
+    "title": "Steps to use beCOOKIES Script",
+    "text1" : "For building a consent banner, copy script and paste at Head-tag on your website.",
+    "text2": "Deploy your website.",
+    "note": "*After the script was paste on your website, you can adjust your consent banner and no need to edit your script."
+  },
+  "landing": {
+    "sec1TitleBold": "Make your website cookies comply with",
+    "sec1TitleLigth": "Personal Data Protection Act 2020",
+    "sec1Subtitle": "Let beCOOKIES help you manage your privacy program so you don't have to worry about the risks of noncompliance. beCOOKIES is easy-to-use software to help you comply with laws like the Personal Data Protection Act 2020. In five minutes, your website will go from a risky liability to an industry-leading example of how to do privacy right.",
+    "tryForFree": "try it for free",
+    "regisBefore": "*Apply today, use the \"FREE!! service until June 1st, 2022. According to the number of website visitors\""
+  },
+  "lang": "en",
+  "language": "English",
+  "navbar": {
+    "logoutButton": "Logout",
+    "websites": "Websites",
+    "categorization": "Categorization",
+    "dashboard": "Dashboard"
+  },
+  "faq": {
+    "textQuestion": "Question",
+    "textAnswers": "Answers",
+    "question1": "What is PDPA?",
+    "answers1": "The Thailand PDPA stands for the new Personal Data Protection Act B.E.2652 of the Kingdom of Thailand. It was passed in 2019 and  has effected businesses starting from May 28th 2020. PDPA is the most comprehensive Thai data privacy law to date. It expands on the rights of users whose data you collect, which means expanding on your obligations as well.",
+    "question2": "Is PDPA similar to other data protection laws, such as the GDPR?",
+    "answers2": "The Thailand PDPA follows the trend set by the GDPR. It has many similarities with this regulation, as well as with data protection laws of East and South-East Asia. If your business complies with the GDPR, it would be easy to comply with the PDPA as well",
+    "question3": "When will the Personal Protection Data Act (PDPA) be enforced in Thailand?",
+    "answers3": "It will be fully implemented on June 1st, 2021",
+    "question4": "What are the penalties for non-compliance with the Personal Protection Data Act (PDPA)?",
+    "answers4": "Enforcement and Penalties \n1.Civil Liability \n- Fine twice the amount of the actual damage \n2.Criminal Liability \n- Imprisonment not over a year or fine not over one million baht or both \n3.Administrative Liability \n- On any offender in the form of an administrative fine not over from  5 million baht depending on the liability of this act",
+    "question5": "What are cookies?",
+    "answers5": "Cookies are usually small text files, when you use your browser to visit a website that uses cookies to keep track of your movements within the site, help you resume where you left off, remember your registered login, theme selection, preferences, and other customization functions.",
+    "question6": "Can I change the design of the popup window on my own?",
+    "answers6": "Yes, you can design a banner and cookie consent by yourself.",
+    "question7": "Does beCOOKIES support multiple languages?",
+    "answers7": "Yes, you can set up translations for your cookie consent popup by Thai or English.",
+    "question8": "How long can I use a free trial?",
+    "answers8": "You can use a free trial until next year, June 1, 2022.",
+    "question9": "Which email should I use for signing-up?",
+    "answers9": "Only 4 domains, you can use which are \"ac.th\", \"co.th\", \"or.th\" and \"go.th\"",
+    "question10": "beCOOKIES offers cookies categorization?",
+    "answers10": "beCOOKIES can group cookies by categories using our database of cookies. Or you can add your own cookies with description and categorize by yourself.",
+    "question11": "If I choose the \"Cancel\" button, on cookie preferences. How does it work?",
+    "answers11": "In short - if you click \"Cancel\", https://becookies.tech always remembers \"a Strictly Necessary Cookies\".",
+    "question12": "Can I set my preferred cookies before accepting all cookies?",
+    "answers12": "Yes, you can set your preferences before accepting all cookies."
+  },
+  "section3": {
+    "card1": {
+      "title": "beCOOKIES No cookies before user agrees to privacy policy",
+      "subtitle": "beCOOKIES automatically blocks and unblocks the write of 3rd-party, allows to select which cookies are strictly necessary (functional) for your website to work properly"
+    },
+    "card2": {
+      "title": "beCOOKIES On-Screen User cookies Preference Setting",
+      "subtitle": "beCOOKIES has a simple on-screen and ease of use user interface for user to change consent preferences or withdraw consent at any time."
+    },
+    "card3": {
+      "title": "beCOOKIES Developer Friendly",
+      "subtitle": "Developers can easily implement beCOOKIES on their website through adding a simple JavaScript."
+    },
+    "card4": {
+      "title": "beCOOKIES Automatic Website Cookies Discovery",
+      "subtitle": "beCOOKIES will help website owners or developers to discover and suggest the categorization of the found cookies on their website, also will continue to monitor of any new found cookies on their website."
+    }
+  },
+  "sectionGray": {
+    "box1": {
+      "title": "Automatic Discover Your Cookies",
+      "subtitle": "Automatically scans your website and detects all cookie files that have been used."
+    },
+    "box2": {
+      "title": "Easy and Quick Integration",
+      "subtitle": "Just easy as you can copy & paste in a few minutes."
+    },
+    "box3": {
+      "title": "Customizable Template",
+      "subtitle": "Alter your content and template of the cookie consent banner as your needs."
+    },
+    "box4": {
+      "title": "Support Multi-languages",
+      "subtitle": "Detect your website language and display banner cookies instantly."
+    },
+    "box5": {
+      "title": "Optimized for Your Device",
+      "subtitle": "beCOOKIES is optimized for a wide range of modern browsers and devices."
+    },
+    "box6": {
+      "title": "One Account, Multiple Domains",
+      "subtitle": "Manage all your domains with single user account."
+    }
+  },
+  "sectionStep": {
+    "title": "Only 3 steps, complying with PDPA",
+    "step1": {
+      "title": "Signing-Up",
+      "subtitle": "Signing-Up on"
+    },
+    "step2": {
+      "title": "Create",
+      "subtitle": "Create banner, text, etc."
+    },
+    "step3": {
+      "title": "Copy Code",
+      "subtitle": "Paste JavaScript."
+    }
+  },
+  "section2": {
+    "title": "Web Cookies PDPA compliance",
+    "text1": "One line of JavaScript on your website",
+    "text2": "and you're compliant with the data privacy laws of 40+ countries."
+  },
+  "sectionBanner": {
+
+  },
+  "sectionSum": {
+    "text": "Make your website use cookies and online track compliance today"
+  },
+  "sectionPartner": {
+    "text": "OUR COOKIES SOLUTION IS USED BY",
+    "highlight": "\"LEADING BRANDS AND ENTERPRISES\""
+  },
+  "website": {
+    "title": "Website",
+    "home": "Home",
+    "addBtn": "Add Domain",
+    "path": "Website / Cookie consent setting",
+    "cookieSetting": "Cookies settings",
+    "livePreview": "Live Preview",
+    "saveBtn": "Save",
+    "cookie": "cookies",
+    "bannerDescription": "Select theme color and layout.",
+    "layout": "Layout",
+    "theme": "Theme Colors",
+    "cookiePrivacy": {
+      "title": "Cookie Privacy Notice Note",
+      "linkName": "Link name",
+      "placeLinkName": "eg. privacy policy",
+      "url": "URL / File",
+      "placeUrl": "e.g. doamain.com/cookie-privacy"
+    },
+    "preview": "Preview",
+    "scriptTitle": "beCOOKIES Consent Script",
+    "scriptDescription": "Copy this script and insert it as the very first script within the HEAD-tag on your website to activate the consent banner.",
+    "cookieNotice": {
+      "title": "Cookies notice",
+      "subtitle": "Enter the text that will be presented to your website users. The same text is used in both the cookie declaration and the consent dialog. In the body text you must describe the general purpose(s) of your cookie usage. Keep the text short, precise and appealing",
+      "language": "Language",
+      "addBtn": "Add",
+      "bannerTitle": "Banner Title",
+      "description": "Description",
+      "cookieSettingBtn": "Cookies setting button",
+      "rejectBtn": "Reject button",
+      "acceptBtn": "Accept button"
+    },
+    "cookies": {
+      "title": "Display for users when setting cookies banner",
+      "labelTitle": "Title",
+      "definition": "Cookies definition"
+    },
+    "consentSetting": {
+      "title": "Cookie consent setting",
+      "addBtn": "Add"
+    },
+    "defualtLanguage": {
+      "title": "Default Language",
+      "checkbox": "Auto detect user language",
+      "description": "Enable automatic language detection to show the consent dialog in the website user's preferred language. If you haven't created a language variant that matches the user's preferred language, the default language variant will be shown."
+    }
+  },
+  "addDomain": {
+    "new": "New Domain",
+    "update": "Schedule",
+    "description": "beCOOKIES will generate a cookies-consent code (script) for any domain name you add here. You can copy the generated script and add it to your website associated with the domain name. We will automatically discover any cookies used in your website; and if some cookies aren’t found, you can manually add them by yourself.",
+    "labelName": "Domain",
+    "placeName": "e.g. www.domain.go.th",
+    "labelOrganization": "Organization",
+    "placOrganization": "Select organization",
+    "labelDefaultLanguage": "Default language",
+    "addBtn": "Add Domain",
+    "updateBtn": "Update Domain"
+  },
+  "cancleBtn": "Cancel",
+  "confirmBtn": "Confirm",
+  "search": "search",
+  "user": {
+    "title": "User",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone No.",
+    "access": "Last Access",
+    "addUserBtn": "Add User"
+  },
+  "addUser": {
+    "title": "Add User",
+    "subtitle": "Add new user which provide you a cookie content management",
+    "labelName": "Name",
+    "placeName": "e.g. name",
+    "labelEmail": "Email",
+    "placeEmail": "e.g.name@domain.co.th (only \".ac.th\", \".co.th\", \".or.th\" and \".go.th\")",
+    "labelPassword": "Password",
+    "placePassword": "********"
+  },
+  "cookieSetting": {
+    "title": "Cookie settings",
+    "subtitle": "You can update the cookie categories and their associated objectives and details.",
+    "cookie": "cookies",
+    "scan": "Re scan",
+    "addCookieBtn": "Add cookie",
+    "unAssign": "Unassigned",
+    "name": "Cookie",
+    "provider": "Provider",
+    "purpose": "Purpose",
+    "expiry": "Duration",
+    "type": "Type",
+    "category": "Categorization",
+    "neccesary": "Neccesary",
+    "preference": "Preference",
+    "statistic": "Statistic",
+    "marketing": "Marketing",
+    "other": "Others",
+    "add": "Add"
+  },
+  "footer": {
+    "about": "About Us",
+    "contact": "Contact Us",
+    "address": "184/87 Forum Tower 18th Fl., Ratchadaphisek Rd., Huai Khwang, Huai Khwang, Bangkok 10310, Thailand"
+  },
+  "policy_data": {
+    "title": "beCOOKIES Privacy Notice",
+    "description": {
+      "welcome": "Welcome to beCOOKIES’s privacy notice",
+      "text": "beCOOKIES (\"we\" or \"us\" or \"our\") respects your privacy and is committed to protecting your personal data and ensuring compliance with the data protection laws. This privacy notice will inform you as to how we process your personal data when you visit and use beCOOKIES services, and what measures we exercise to protect your personal data under Thai Personal Data Protection Act and other applicable laws"
+    },
+    "definitions": {
+      "title": "Definitions",
+      "text1": "\"You\" means Data subject who wants to apply or becomes a registered beCOOKIES user",
+      "text2": "\"beCOOKIES\" means the data controller for th­e processing your personal data described in this notice",
+      "text3": "\"Personal data\" means your personal identifiable information considered under Thai Personal Data Protection Act and other applicable laws",
+      "text4": "\"Processing\" means any operation or set of operations performed upon your personal data, such as collection, use, recording/structuring or storage, transmission and disclosure, and erasure and anonymization of your personal data"
+    },
+    "how_to_collect": {
+      "title": "How we collect your personal data",
+      "description": {
+        "top": "beCOOKIES services are mainly offered to businesses and organizations. Financial data and transactional data will be considered as non-personal data as they relate to the organization you represent and not you, based on the definitions of personal data under most data protection laws. However, we may collect or receive your personal data from the business or organization you represent if you are authorized to use our services in connection with your business or organization’s account.",
+        "text1": "1. ­­Personal data that we collect from you directly when you apply for our services and fill out your personal data online includes your name, username, title, the identity of the organization you represent",
+        "text2": "2. Personal data that we automatically collect from your equipment and browsing activities. We collect these technical data and usage data by using cookies and similar technologies. We also receive technical data about you if you visit other websites employing beCOOKIES’s cookies.",
+        "mid": "We may collect or receive different types of personal data which we have grouped together as follows:",
+        "sub1": {
+          "head": "1. Identity Data",
+          "content": "includes your first name, last name, title and identity of the organization you represent"
+        },
+        "sub2": {
+          "head": "2. User Profile Data",
+          "content": "includes your username and password, interests, preferences, purchase orders on beCOOKIES made by you, and feedback and survey responses"
+        },
+        "sub3": {
+          "head": "3. Communication Data",
+          "content": "includes your addresses, email, and telephone numbers"
+        },
+        "sub4": {
+          "head": "4. Financial Data",
+          "content": "includes details about payments to and from you and other details of orders made by you, and bank account and payment card details"
+        },
+        "sub5": {
+          "head": "5. Technical Data",
+          "content": "includes IP Address, your login data, browser type and version, time zone setting and location, and platform technical data of the devices you use to access and interact with our websites to offer our beCOOKIES services"
+        },
+        "buttom": "beCOOKIES are \"not\" intended to provide services to children and we do not collect or receive any of your sensitive data (or special category data under Article 26 of PDPA). If we want to process your sensitive data, we will explicitly obtain your consent before we collect or receive your personal data or when in the circumstances that the law allows us to use your personal data."
+      }
+    },
+    "purposes": {
+      "title": "The purposes and the legal basis",
+      "description": "beCOOKIES will only process your personal data with the followings purposes, and which of the legal bases we rely on to do so.",
+      "table": {
+        "head1": "Purpose/Activity",
+        "head2": "Type of personal data",
+        "head3": "Legal basis for processing",
+        "body_row1": {
+          "col1": "Where we need to perform the contract we are about to enter into or have entered into with you",
+          "col2": "1. Identity Data\n2. User Profile Data\n3. Communication Data\n4. Financial Data\n5. Technical Data`",
+          "col3": "1. Performance of a contract with you\n2. Necessary for our legitimate interests to perform a contract with you or the organization you represent"
+        },
+        "body_row2": {
+          "col1": "Where we need to protect beCOOKIES’s information security and perform security measures",
+          "col2": "1. User Profile Data\n2. Technical Data",
+          "col3": "1. Necessary for our legitimate interests for operating beCOOKIES services, protecting our service information security and preventing unauthorized access and fraud\n2. Necessary to comply with a legal obligation under Computer Crime Act"
+        },
+        "body_row3": {
+          "col1": "Where we need to communicate our marketing campaign or enable you to participate in our events",
+          "col2": "1. Identity Data\n2. User Profile Data\n3. Communication Data",
+          "col3": "1. Explicitly obtain your consent(s) to specific marketing purpose(s)"
+        },
+        "body_row4": {
+          "col1": "Other further purposes",
+          "col2": "beCOOKIES will inform you other further purposes we set out in our Privacy Notice before or at the point where we collect or receive your personal data.  We will use your personal data only in the specific purpose(s) that you have provided your consent(s) or when in the circumstances that applicable laws allow us to."
+        }
+      }
+    },
+    "disclosure": {
+      "title": "Disclosure of Personal data to Third Parties",
+      "desc1": "beCOOKIES may disclose your personal data for the specified purposes with your consent to the following persons and entities",
+      "text1": "1. beCOOKIES’s staff and employees on the need-to-know basis",
+      "text2": "2. Other data controllers or data processors on the specified purposed with your explicit consent or under the criteria prescribed by applicable laws",
+      "text3": "3. Data controllers or data processors outside the country which ensures the adequate level of personal data protection in compliance with Thai Personal Data Protection Act",
+      "desc2": "beCOOKIES may transfer your personal data to cloud service providers or payment processing providers in the countries outside Thailand. We will ensure that your personal data receive an adequate level of protection by use of standard contractual clauses used in European Union or by the adequacy decision made by the Thai Data Protection Commission."
+    },
+    "data_retentions": {
+      "title": "Data Retention",
+      "desc1": "beCOOKIES retain your personal data we collect for the specified purposes with your consent. When we have no ongoing legitimate business need to process your personal data, we will either delete or anonymize them.",
+      "desc2": "Data may be retained for different periods based upon the processing purposes or the necessaries to comply with a legal obligation.",
+      "text1": "1. Identity Data will be deleted or anonymized immediately when we have no ongoing legitimate business need to do so.",
+      "text2": "2. User Profile Data will be deleted or anonymized immediately when we have no ongoing legitimate business need to do so.",
+      "text3": "3. Communication data will be saved for one year after you withdraw your consent or you cancel beCOOKIES services.",
+      "text4": "4. Financial data will be saved to demonstrate the agreement we have/have had and for accounting and tax purposes for up to five full fiscal years.",
+      "text5": "5. Technical data will be saved for 90 days after we collect the data or for any longer period under the criteria prescribed by applicable laws.",
+      "desc3": ""
+    },
+    "exercise": {
+      "title": "Exercise your personal data protection rights",
+      "desc1": "beCOOKIES respects the privacy of our customers and we provide the certain data protection rights for you to exercise them in accordance with applicable personal data protection laws.",
+      "text1": "1. Request access to your personal data (also known as data subject access request). This enables you to receive a copy of the personal data we hold about you and to check that we have lawfully collected it.",
+      "text2": "2. Request correction of the personal data that we hold about you. This enables you to have any incomplete or inaccurate information we hold about you rectified.",
+      "text3": "3. Request transfer of your personal data to another party (also known as data portability) when it is technically feasible.",
+      "text4": "4. Request erasure of your personal data. This enables you to ask us to delete or remove personal data where there is no good reason for us continuing to process it.",
+      "text5": "5. Object to processing of your personal data where we are relying on a legitimate interest (or those of a third party) and there is something about your particular situation which makes you want to object to processing on this ground, for example if you want to object the processing your personal data for direct marketing purposes, or when the purposes have changed and you do not agree to give the consent.",
+      "text6": "6. Request the restriction of processing of your personal data. This enables you to ask us to suspend the processing of personal data about you, for example if you want us to establish its accuracy or the reason for processing it.",
+      "text7": "7. Where our processing is solely based on your specific consent you have the right to with-draw your consent at any time.",
+      "text8": "8. You have the right to complain to Thai Data Protection Authority if you found any negligence, malpractice, or misconduct in protecting your privacy carried by beCOOKIES.",
+      "desc2": "When beCOOKIES receive your request, we will respond within the time limit in accordance with applicable personal data protection laws."
+    },
+    "security": {
+      "title": "Security Measures for Personal Data Protection",
+      "desc": "beCOOKIES was designed according to the principles of Privacy-by-Design and Security-by-Design, we use trusted technologies and qualified cloud service providers who have registered with international security and privacy protection standards namely ISO/IEC 27001:2013, 27701:2019, 27017:2015, 27018:2019, ISO/IEC 9001:2015 and CSA STAR CCM v3.0.1. In addition, beCOOKIES has implemented access control measures to ensure that your personal data are well guarded and have sufficient and adequacy protection from any unauthorized access person."
+    },
+    "changes": {
+      "title": "Changes to this Privacy Notice",
+      "desc": "beCOOKIES will review and update this Privacy Notice annually to reflect changing of legal, regulatory, operational requirements, or to meet international technical standards. If there are any changes to this Privacy Notice, it will be posted on our Website before the change becoming effective."
+    },
+    "contact": {
+      "title": "Contact Information",
+      "desc": "If you have questions regarding this Privacy Notice or want to exercise your data protection rights, please contact our Data Protection Office (DPO) at"
+    },
+    "email": "Email: dpo@beCOOKIES.tech",
+    "phone": "Tel: 02-0040604",
+    "att": "Att: Data Protection Office",
+    "address": "beCOOKIES address 184/87 Forum Tower 18th Fl., Ratchadaphisek Road, Huai Kwang, Huai Kwang, Bangkok 10310, Thailand",
+    "end": "Privacy Notice Established on May 1st, 2021"
+  }
+}

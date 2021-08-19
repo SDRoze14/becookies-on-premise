@@ -1,0 +1,16 @@
+#Host
+host: dev.becookies.tech
+
+#Tag
+namespace: dev
+ssl: bkc-ssl
+
+#Docker Image
+image: asia.gcr.io/beid-307007/cookie-web:develop
+
+replicaCount: 1
+nodeSelector: default-pool
+
+#ENV
+api: https://dev.becookies.tech
+previewUrl: https://core.becookies.tech/script.js

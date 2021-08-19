@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: "{{ .Chart.Name }}-ingress-nginx"
+  namespace: "{{required "A valid .Values.namespace entry required!" .Values.namespace }}"
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    kubernetes.io/ingress.allow-http: "false"
+    kubernetes.io/tls-acme: "true"
+spec:
+  tls:
+  - secretName: star-cookie-ssl	
+  rules:
+  - host: {{required "A valid .Values.host entry required!" .Values.host }}
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: "{{ .Chart.Name }}"
+          servicePort: 80

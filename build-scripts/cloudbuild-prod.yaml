@@ -1,0 +1,20 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'asia.gcr.io/$PROJECT_ID/cookie-web-prod:master', '.']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'asia.gcr.io/$PROJECT_ID/cookie-web-prod:master']
+  - name: 'asia.gcr.io/$PROJECT_ID/helm'
+    args:
+      - upgrade
+      - becookies-web
+      - --install
+      - --namespace
+      - prod
+      - --recreate-pods
+      - -f
+      - helm/cookie-web/prod.yaml
+      - helm/cookie-web/
+    env:
+      - 'CLOUDSDK_CORE_PROJECT=rst-company'
+      - 'CLOUDSDK_COMPUTE_ZONE=asia-southeast1-a'
+      - 'CLOUDSDK_CONTAINER_CLUSTER=pki'
