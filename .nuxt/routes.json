@@ -1,0 +1,206 @@
+[
+  {
+    "name": "categorization___th",
+    "path": "/categorization",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/categorization/index.vue",
+    "chunkName": "pages/categorization/index"
+  },
+  {
+    "name": "dashboard___th",
+    "path": "/dashboard",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/dashboard.vue",
+    "chunkName": "pages/dashboard"
+  },
+  {
+    "name": "index___en",
+    "path": "/en",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/index.vue",
+    "chunkName": "pages/index"
+  },
+  {
+    "name": "faq___th",
+    "path": "/faq",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/faq.vue",
+    "chunkName": "pages/faq"
+  },
+  {
+    "name": "login___th",
+    "path": "/login",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/login.vue",
+    "chunkName": "pages/login"
+  },
+  {
+    "name": "policy___th",
+    "path": "/policy",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/policy.vue",
+    "chunkName": "pages/policy"
+  },
+  {
+    "name": "reports___th",
+    "path": "/reports",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/reports.vue",
+    "chunkName": "pages/reports"
+  },
+  {
+    "name": "signup___th",
+    "path": "/signup",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/signup/index.vue",
+    "chunkName": "pages/signup/index"
+  },
+  {
+    "name": "signup25032021___th",
+    "path": "/signup25032021",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/signup25032021/index.vue",
+    "chunkName": "pages/signup25032021/index"
+  },
+  {
+    "name": "terms___th",
+    "path": "/terms",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/terms.vue",
+    "chunkName": "pages/terms"
+  },
+  {
+    "name": "user___th",
+    "path": "/user",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/user/index.vue",
+    "chunkName": "pages/user/index"
+  },
+  {
+    "name": "websites___th",
+    "path": "/websites",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/websites/index.vue",
+    "chunkName": "pages/websites/index"
+  },
+  {
+    "name": "categorization___en",
+    "path": "/en/categorization",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/categorization/index.vue",
+    "chunkName": "pages/categorization/index"
+  },
+  {
+    "name": "dashboard___en",
+    "path": "/en/dashboard",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/dashboard.vue",
+    "chunkName": "pages/dashboard"
+  },
+  {
+    "name": "faq___en",
+    "path": "/en/faq",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/faq.vue",
+    "chunkName": "pages/faq"
+  },
+  {
+    "name": "login___en",
+    "path": "/en/login",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/login.vue",
+    "chunkName": "pages/login"
+  },
+  {
+    "name": "policy___en",
+    "path": "/en/policy",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/policy.vue",
+    "chunkName": "pages/policy"
+  },
+  {
+    "name": "reports___en",
+    "path": "/en/reports",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/reports.vue",
+    "chunkName": "pages/reports"
+  },
+  {
+    "name": "signup___en",
+    "path": "/en/signup",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/signup/index.vue",
+    "chunkName": "pages/signup/index"
+  },
+  {
+    "name": "signup25032021___en",
+    "path": "/en/signup25032021",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/signup25032021/index.vue",
+    "chunkName": "pages/signup25032021/index"
+  },
+  {
+    "name": "terms___en",
+    "path": "/en/terms",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/terms.vue",
+    "chunkName": "pages/terms"
+  },
+  {
+    "name": "user___en",
+    "path": "/en/user",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/user/index.vue",
+    "chunkName": "pages/user/index"
+  },
+  {
+    "name": "websites___en",
+    "path": "/en/websites",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/websites/index.vue",
+    "chunkName": "pages/websites/index"
+  },
+  {
+    "name": "password-change___th",
+    "path": "/password/change",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/password/change.vue",
+    "chunkName": "pages/password/change"
+  },
+  {
+    "name": "password-reset___th",
+    "path": "/password/reset",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/password/reset.vue",
+    "chunkName": "pages/password/reset"
+  },
+  {
+    "name": "signup-confirmation___th",
+    "path": "/signup/confirmation",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/signup/confirmation.vue",
+    "chunkName": "pages/signup/confirmation"
+  },
+  {
+    "name": "password-change___en",
+    "path": "/en/password/change",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/password/change.vue",
+    "chunkName": "pages/password/change"
+  },
+  {
+    "name": "password-reset___en",
+    "path": "/en/password/reset",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/password/reset.vue",
+    "chunkName": "pages/password/reset"
+  },
+  {
+    "name": "signup-confirmation___en",
+    "path": "/en/signup/confirmation",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/signup/confirmation.vue",
+    "chunkName": "pages/signup/confirmation"
+  },
+  {
+    "name": "websites-id___en",
+    "path": "/en/websites/:id",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/websites/_id/index.vue",
+    "chunkName": "pages/websites/_id/index"
+  },
+  {
+    "name": "websites-id-re-assign___en",
+    "path": "/en/websites/:id/re-assign",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/websites/_id/re-assign.vue",
+    "chunkName": "pages/websites/_id/re-assign"
+  },
+  {
+    "name": "websites-id___th",
+    "path": "/websites/:id",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/websites/_id/index.vue",
+    "chunkName": "pages/websites/_id/index"
+  },
+  {
+    "name": "websites-id-re-assign___th",
+    "path": "/websites/:id/re-assign",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/websites/_id/re-assign.vue",
+    "chunkName": "pages/websites/_id/re-assign"
+  },
+  {
+    "name": "index___th",
+    "path": "/",
+    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/index.vue",
+    "chunkName": "pages/index"
+  }
+]

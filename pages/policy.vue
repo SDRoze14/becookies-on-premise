@@ -34,9 +34,9 @@
         <div class="table-border">
           <table class="w-full">
             <thead>
-              <th class="font-medium w-1/3">{{$t('policy_data.purposes.table.head1')}}</th>
-              <th class="font-medium w-1/3">{{$t('policy_data.purposes.table.head2')}}</th>
-              <th class="font-medium w-1/3">{{$t('policy_data.purposes.table.head3')}}</th>
+              <th id="heade1" class="font-medium w-1/3">{{$t('policy_data.purposes.table.head1')}}</th>
+              <th id="heade2" class="font-medium w-1/3">{{$t('policy_data.purposes.table.head2')}}</th>
+              <th id="heade3" class="font-medium w-1/3">{{$t('policy_data.purposes.table.head3')}}</th>
             </thead>
             <tbody>
               <tr>

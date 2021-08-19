@@ -177,7 +177,7 @@ export default {
     logined() {
       let token = localStorage.getItem('token')
       if (token) return true
-      else false
+      else return false
     },
     user() {
       let user = JSON.parse(localStorage.getItem('user'))

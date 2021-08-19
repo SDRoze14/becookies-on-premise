@@ -163,14 +163,14 @@
       <div class="table-custom text-sm">
         <table>
           <thead>
-            <th>#</th>
-            <th class="text-center">Timestamp</th>
-            <th>Consent ID</th>
-            <th>Client ID</th>
-            <th>IP</th>
-            <th>User Agent</th>
-            <th>Consent Type</th>
-            <th>Ref. URL</th>
+            <th id="index">#</th>
+            <th id="time stamp" class="text-center">Timestamp</th>
+            <th id="consent id">Consent ID</th>
+            <th id="client id">Client ID</th>
+            <th id="ip">IP</th>
+            <th id="user agent">User Agent</th>
+            <th id="consent type">Consent Type</th>
+            <th id="ref">Ref. URL</th>
             <!-- <th>Action</th> -->
           </thead>
           <tbody class="divide-y divide-gray-100">

@@ -95,7 +95,7 @@
                   slot="toggle"
                   class="p-2 border border-gray-200 rounded-md flex items-center"
                 >
-                  <img :src="$model.layout(application.present_type).img" />
+                  <img :src="$model.layout(application.present_type).img" alt="layout"/>
                   <div>
                     <base-icon
                       class="ml-5 mr-4"
@@ -121,6 +121,7 @@
                         :src="l.img"
                         class="cursor-pointer"
                         @click="application.present_type = l.value"
+                        alt="dropdown layout"
                       />
                     </div>
                   </div>

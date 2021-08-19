@@ -33,14 +33,14 @@
       <div class="table-custom">
         <table>
           <thead>
-            <th>#</th>
+            <th id="index">#</th>
             <!-- <th>{{$t('user.name')}}</th> -->
-            <th>{{$t('user.email')}}</th>
+            <th id="email">{{$t('user.email')}}</th>
             <!-- <th>{{$t('user.phone')}}</th> -->
-            <th>{{$t('user.access')}}</th>
-            <th>Role</th>
+            <th id="access">{{$t('user.access')}}</th>
+            <th id="role">Role</th>
             <!-- <th>Status</th> -->
-            <th></th>
+            <th id="manage"></th>
           </thead>
           <tbody class="divide-y divide-gray-100">
             <tr v-for="(u, i) in users" :key="`app-${i}`" class="">

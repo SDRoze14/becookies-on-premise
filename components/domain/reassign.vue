@@ -76,13 +76,13 @@
     <div class="table-custom text-sm py-4">
       <table>
         <thead>
-          <th>{{$t('cookieSetting.name')}}</th>
-          <th>{{$t('cookieSetting.provider')}}</th>
-          <th>{{$t('cookieSetting.purpose')}}</th>
-          <th>{{$t('cookieSetting.expiry')}}</th>
-          <th>{{$t('cookieSetting.type')}}</th>
-          <th>{{$t('cookieSetting.category')}}</th>
-          <th></th>
+          <th id="name">{{$t('cookieSetting.name')}}</th>
+          <th id="provider">{{$t('cookieSetting.provider')}}</th>
+          <th id="purpose">{{$t('cookieSetting.purpose')}}</th>
+          <th id="expiry">{{$t('cookieSetting.expiry')}}</th>
+          <th id="type">{{$t('cookieSetting.type')}}</th>
+          <th id="category">{{$t('cookieSetting.category')}}</th>
+          <th id="manage"></th>
         </thead>
         <tbody class="divide-y divide-white">
           <tr

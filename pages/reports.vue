@@ -31,11 +31,11 @@
         <table>
           <thead>
             <tr>
-              <th class="th-left">Ref. No</th>
-              <th>IP Address</th>
-              <th>Timestamp</th>
-              <th>Type</th>
-              <th>Action</th>
+              <th id="ref no" class="th-left">Ref. No</th>
+              <th id="ip address">IP Address</th>
+              <th id="timestamp">Timestamp</th>
+              <th id="type">Type</th>
+              <th id="action">Action</th>
             </tr>
           </thead>
           <tbody>

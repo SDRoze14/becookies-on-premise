@@ -2,7 +2,7 @@
   <div>
     <div class="flex flex-wrap mt-6 mb-4">
       <div class="w-full md:w-1/2 self-center hidden md:block">
-        <img src="/images/img-cookie-secue.png" class="translate-x--20" />
+        <img src="/images/img-cookie-secue.png" class="translate-x--20" alt="cookie-secure"/>
       </div>
       <div class="w-full md:w-1/2 md:pl-8 p-6">
         <div class="text-3xl">{{ $t('signup.title') }} Test</div>

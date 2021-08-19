@@ -35,10 +35,10 @@
       <div class="table-custom text-sm py-4">
         <table>
           <thead>
-            <th>Category name</th>
-            <th>Objective</th>
-            <th>Status</th>
-            <th></th>
+            <th id="category name">Category name</th>
+            <th id="object">Objective</th>
+            <th id="status">Status</th>
+            <th id="manage"></th>
           </thead>
           <tbody class="divide-y divide-gray-100">
             <tr v-for="(cat, i) in categories" :key="`cat-${i}`">
@@ -153,14 +153,14 @@
       <div class="table-custom text-sm py-4">
         <table>
           <thead>
-            <th>Cookie name</th>
-            <th>Domains</th>
-            <th>Provider</th>
-            <th>Purpose</th>
-            <th>Expiry</th>
-            <th>Type</th>
-            <th>Category</th>
-            <th></th>
+            <th id="cookie name">Cookie name</th>
+            <th id="domain">Domains</th>
+            <th id="povider">Provider</th>
+            <th id="purpose">Purpose</th>
+            <th id="expiry">Expiry</th>
+            <th id="type">Type</th>
+            <th id="category">Category</th>
+            <th id="manage"></th>
           </thead>
           <tbody class="divide-y divide-gray-100">
             <tr v-for="(cookie, i) in cookies" :key="`cat-${i}`">
