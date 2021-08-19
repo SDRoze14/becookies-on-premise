@@ -24,25 +24,7 @@
             <p class="font-light pb-2">support@rst.technology</p>
           </div>
         </div>
-
-        <!-- <div class="flex-1">
-          <p class="text-center text-gray-700 text-xl mb-4">
-            Subscribe to our newsletter
-          </p>
-          <div class="flex justify-center mb-8">
-            <input
-              type="text"
-              placeholder="Enter you email"
-              class="text-sm focus:outline-none border border-gray-300 rounded-l-md px-4 py-2 focus:shadow-outline-primary"
-            />
-            <button
-              type="text"
-              class="text-sm focus:outline-none bg-primary uppercase text-white px-6 py-2 rounded-r-md"
-            >
-              Sign up
-            </button>
-          </div>
-        </div> -->
+        
       </div>
       <div class="border-b border-cool-gray-200"></div>
       <div class="w-full flex flex-col md:flex-row pt-4 pb-8">

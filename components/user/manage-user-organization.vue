@@ -7,14 +7,6 @@
       {{$t('addUser.subtitle')}}
     </div>
 
-    <!-- <div class="mt-2">
-      <div>{{$t('addUser.labelName')}}</div>
-      <base-input
-        v-model="name"
-        placeholder="e.g. name"
-      ></base-input>
-    </div> -->
-
     <div class="mt-2">
       <div>{{$t('addUser.labelEmail')}}</div>
       <base-input
@@ -22,22 +14,6 @@
         placeholder="e.g. name@domain.com"
       ></base-input>
     </div>
-
-    <!-- <div class="mt-2">
-      <div>{{$t('addUser.labelPassword')}}</div>
-      <base-input
-        v-model="password"
-        type="password"
-      ></base-input>
-    </div> -->
-
-    <!-- <div class="mt-2">
-      <div>Organization ID</div>
-      <base-input
-        v-model="organizationId"
-        disabled
-      ></base-input>
-    </div> -->
 
     <div
       v-if="error"
@@ -86,8 +62,6 @@ export default {
       return this.$store.getters['organizations/getOrganizationId']
     }
   },
-  mounted() {
-  },
   methods: {
     show() {
       // this.organizationId = this.applications[0].organizationId
@@ -100,8 +74,8 @@ export default {
       var error = ''
 
       if (!self.$model.validateEmail(self.email))
-        error = self.$t('lang') == 'en' ? 'Invalid email.' : 'อีเมลไม่ถูกต้อง'
-      else if (!self.email) error = self.$t('lang') == 'en' ? 'Please enter your Email.' : 'กรุณากรอกอีเมล'
+        error = self.$t('user_org.err_invalid_email')
+      else if (!self.email) error = self.$t('user_org.err_empty_email')
 
       self.error = error
       if (error) return
@@ -117,17 +91,12 @@ export default {
             self.isShow = false
             self.$emit('added', true)
           })
-          .catch((error) => {
+          .catch((err) => {
             self.$toast.open({
-              message: error.response.data.message == 'Not found' ? self.$t('lang') == 'en' ? 'User not found' : 'ไม่พบผู้ใช้' : error.response.data.message,
+              message: err.response.data.message == 'Not found' ? self.$t('user_org.err_not_found') : error.response.data.message,
               type: 'error',
               duration: 6000,
             })
-            // var code = error.response.data.code
-            // if (code == 'ValidationException')
-            //   self.error = "Error can't find your email."
-            // else if (code == 'UsernameExistsException') self.error = self.$t('lang') == 'en' ? 'This email has been used already' : 'อีเมลนี้ถูกใช้งานแล้ว'
-            // else self.error = 'Unknow error.'
           })
 
       self.$store.dispatch('loading/setLoading', false)

@@ -390,5 +390,42 @@
     "att": "Att: Data Protection Office",
     "address": "beCOOKIES address 184/87 Forum Tower 18th Fl., Ratchadaphisek Road, Huai Kwang, Huai Kwang, Bangkok 10310, Thailand",
     "end": "Privacy Notice Established on May 1st, 2021"
+  },
+  "change_pass": {
+    "title": "Change Password",
+    "current": "Current Password",
+    "new": "New Password",
+    "confirm": "Confirm New Password",
+    "save": "Save",
+    "err_empty_current": "Please enter current password",
+    "err_empty_new": "Please enter new password",
+    "err_empty_confirm": "Please enter confirm new password",
+    "err_notmatch": "Password do not match",
+    "changed": "Change Password Successfully.",
+    "somthing_wrong": "Something wrong. Please try again"
+  },
+  "forget_pass": {
+    "title": "Forgot Password",
+    "subtitle": "Please enter your email and check your inbox",
+    "placeholder": "Enter email address",
+    "btn_forgot": "Forgot",
+    "err_empty_email": "Please enter your email.",
+    "err_invalif_email": "Invalid email",
+    "send_success": "Send Email Success.",
+    "err_not_find_email": "Could not find an email address"
+  },
+  "user_org": {
+    "err_empty_email": "Invalid email.",
+    "err_invalid_email": "Please enter your Email.",
+    "err_not_found": "User not found"
+  },
+  "manage_confirm": {
+    "title1": "You have registered already.",
+    "title2": "Please check your email for verifying your account."
+  },
+  "manage_register": {
+    "text1": "You have registered already.",
+    "text2": "Please check your email for verifying your account.",
+    "copy": "Copy to clipboard."
   }
 }

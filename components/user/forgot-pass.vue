@@ -1,11 +1,11 @@
 <template>
   <base-modal v-model="isShow">
-    <div class="py-3 border-b-2 border-gray-100 text-center">{{$t('lang') == 'en' ? 'Forgot Password' : 'ลืมรหัสผ่าน'}}</div>
+    <div class="py-3 border-b-2 border-gray-100 text-center">{{$t('forget_pass.title')}}</div>
     <div class="text-sm text-gray-500 py-2">
-      {{$t('lang') == 'en' ? 'Please enter your email and check your inbox' : 'กรุณากรอกอีเมล และตรวจสอบกล่องข้อความขาเข้าของท่าน'}}
+      {{$t('forget_pass.subtitle')}}
     </div>
 
-    <base-input type="email" v-model="email" :placeholder="$t('lang') == 'en' ? 'Enter email address' : 'กรอกอีเมล'"></base-input>
+    <base-input type="email" v-model="email" :placeholder="$t('forget_pass.placeholder')"></base-input>
 
     <div v-if="error" class="py-2 bg-red-50 text-red-600 text-sm mt-3 px-3 rounded-sm">
       {{error}}
@@ -16,7 +16,7 @@
         <base-button color="gray" @click="isShow = false">{{$t('cancleBtn')}}</base-button>
       </div>
       <div class="mx-2">
-        <base-button color="primary" @click="confirmClick">{{ $t('lang') == 'en' ? 'Forgot' : 'ลืมรหัสผ่าน' }}</base-button>
+        <base-button color="primary" @click="confirmClick">{{ $t('forget_pass.btn_forgot') }}</base-button>
       </div>
     </div>
   </base-modal>
@@ -44,8 +44,8 @@ export default {
       let error = ''
 
       
-      if (!self.email) error = self.$t('lang') == 'en' ? 'Please enter your email.' : 'กรุณากรอกอีเมล'
-      else if (!self.$model.validateEmail(self.email)) error = self.$t('lang') == 'en' ? 'Invalid email' : 'อีเมลไม่ถูกต้อง'
+      if (!self.email) error = self.$t('forget_pass.err_empty_email')
+      else if (!self.$model.validateEmail(self.email)) error = self.$t('forget_pass.err_invalif_email')
 
       self.error = error
 
@@ -58,15 +58,15 @@ export default {
       })
         .then(response => {
           self.$toast.open({
-            message: self.$t('lang') == 'en' ? 'Send Email Success.' : 'อีเมลถูกส่งแล้ว',
+            message: self.$t('forget_pass.send_success'),
             type: 'success',
             duration: 6000,
           })
           self.isShow = false
         })
-        .catch(error => {
+        .catch(err => {
           self.$toast.open({
-            message: error.response.data.message == 'Not found' ? self.$t('lang') == 'en' ? 'Could not find an email address' : 'ไม่พบอีเมลนี้ในระบบ' : error.response.data.message,
+            message: err.response.data.message == 'Not found' ? self.$t('forget_pass.err_not_find_email') : error.response.data.message,
             type: 'error',
             duration: 6000,
           })

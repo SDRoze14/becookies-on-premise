@@ -65,13 +65,6 @@
               >Login</nuxt-link
             >
           </li>
-          <!-- <li class="mr-4">
-            <nuxt-link
-              class="inline-block text-white text-sm no-underline hover:text-gray-200 py-2 px-4"
-              to="/signup"
-              >Signup</nuxt-link
-            >
-          </li> -->
         </ul>
       </div>
     </div>

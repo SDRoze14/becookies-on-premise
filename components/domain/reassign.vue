@@ -322,7 +322,9 @@ export default {
         {
           category_id: cat.id
         }
-      ).then(response => {})
+      ).then(response => {
+        console.log('success')
+      })
       .catch(error => {
         console.log(error.response.data)
       })
@@ -356,3 +358,4 @@ export default {
 }
 </script>
 
+<style></style>

@@ -65,13 +65,6 @@
               >Login</nuxt-link
             >
           </li>
-          <!-- <li class="mr-4 mt-4 lg:mt-0">
-            <nuxt-link
-              class="inline-block text-white text-sm no-underline hover:text-gray-200 py-2 px-6 border border-white rounded-full"
-              to="/"
-              >Try for free</nuxt-link
-            >
-          </li> -->
         </ul>
       </div>
     </div>
