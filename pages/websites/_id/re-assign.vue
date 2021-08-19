@@ -45,13 +45,13 @@
       <div class="table-custom">
         <table>
           <thead>
-            <th>#</th>
-            <th>Name</th>
-            <th>Provider</th>
-            <th>Purpose</th>
-            <th>Expiry</th>
-            <th>Type</th>
-            <th>Category</th>
+            <th id="index">#</th>
+            <th id="name">Name</th>
+            <th id="provider">Provider</th>
+            <th id="purpose">Purpose</th>
+            <th id="expiry">Expiry</th>
+            <th id="type">Type</th>
+            <th id="category">Category</th>
             <th></th>
           </thead>
           <tbody class="divide-y divide-white">
