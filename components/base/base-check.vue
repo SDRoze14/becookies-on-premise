@@ -61,8 +61,9 @@ export default {
       if (this.multi) {
         return this.value.includes(this.inputValue)
       } else {
-        if (this.value === this.inputValue || this.value == true) return true
-        else return false
+        return this.value === this.inputValue || this.value === -true
+          ? true
+          : false
       }
     },
   },
