@@ -14,13 +14,6 @@
       <base-input v-model="name" d placeholder="e.g. Name"></base-input>
     </div>
 
-    <!-- <div class="mt-2 flex text-sm">
-      <div class="w-24 text-gray-500">Provider</div>
-      <div class="flex-1 text-blue-500">
-        {{ cookie.provider ? cookie.provider : 'No data' }}
-      </div>
-    </div> -->
-
     <div class="mt-2">
       <div>Provider</div>
       <base-input v-model="provider" placeholder="e.g. google.com"></base-input>
@@ -64,7 +57,6 @@
         </div>
       </div>
       <div class="w-1/3">
-        <!-- <div>{{$t('lang') == 'en' ? 'Cookie type' : 'ประเภทคุกกี้'}}</div> -->
         <div class="flex w-full">
           <base-dropdown
             :text="$model.cookieType(scheme_type).label"
@@ -171,7 +163,7 @@ export default {
       this.categoryId = ''
       this.scheme_type = 2
       this.isShow = true
-      this.error = '',
+      this.error = ''
       this.type_expiry = 'hour'
     },
     async addClick() {
@@ -213,8 +205,8 @@ export default {
             self.isShow = false
             self.$emit('updated', true)
           })
-          .catch((error) => {
-            var code = error.response.data.message
+          .catch((err) => {
+            var code = err.response.data.message
             self.error = code
           })
 
@@ -229,4 +221,3 @@ export default {
 }
 </script>
 
-<style></style>

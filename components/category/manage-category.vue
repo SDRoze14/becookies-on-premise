@@ -118,8 +118,8 @@ export default {
             self.isShow = false
             self.$emit('updated', true)
           })
-          .catch((error) => {
-            var code = res.response.data.code
+          .catch((err) => {
+            var code = err.response.data.code
             if (code == 'InvalidParameterException')
               self.error = 'Password must have length greater than 6'
             else self.error = 'Unknow error.'
@@ -135,8 +135,8 @@ export default {
             self.isShow = false
             self.$emit('added', true)
           })
-          .catch((error) => {
-            var code = res.response.data.code
+          .catch((err) => {
+            var code = err.response.data.code
             if (code == 'InvalidParameterException')
               self.error = 'Password must have length greater than 6'
             else self.error = 'Unknow error.'
@@ -148,5 +148,3 @@ export default {
   },
 }
 </script>
-
-<style></style>

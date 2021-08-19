@@ -18,34 +18,10 @@
     <div
       class="flex items-center text-sm text-gray-400 font-light space-x-6 py-2"
     >
-      <!-- <div class="text-white">
-        Discover:
-        <span
-          v-if="app.status == 'complete'"
-          class="bg-green-100 text-white text-xs px-3 py-1 rounded"
-          >Completed</span
-        >
-      </div> -->
       <div>
         Found:
         <span class="text-gray-800">{{ app.cookie_counts }}</span> {{$t('cookieSetting.cookie')}}
-        <!-- <span class="text-gray-800">{{ app.cookieChanges }}</span>
-        Cookies change -->
       </div>
-      <!-- <div
-        class="bg-gray-200 text-gray-500 py-1 px-4 rounded-full cursor-pointer flex items-center"
-        @click="rescanClick"
-        :disabled="isLoadingScan"
-      >
-        <base-icon
-          icon="refresh"
-          width="20"
-          height="20"
-          class="text-primary"
-          :class="{ 'animate-spin': isLoadingScan }"
-        />
-        <div>{{$t('cookieSetting.scan')}}</div>
-      </div> -->
       <div class="flex-1"></div>
       <div v-if="role == 1000 || role == 10">
         <base-button color="primary" @click="addCookieClick">
@@ -126,15 +102,6 @@
             </td>
             <td>
               <div class="flex w-40">
-                <!-- <base-dropdown
-                  toggleClass="w-full"
-                  :dropdownWidthFull="true"
-                  :text="getCategoryName(c.category_id)"
-                  :theme="
-                    c.id == 'unknown' ? 'primary' : 'primary-border'
-                  "
-                  :disabled="!c.editable"
-                > -->
                 <base-dropdown
                   toggleClass="w-full"
                   :dropdownWidthFull="true"
@@ -338,7 +305,9 @@ export default {
           })
           self.editRow = -1
         })
-        .catch((error => {}))
+        .catch((error => {
+          console.log(error.response.data)
+        }))
       self.$store.dispatch('loading/setLoading', false)
     },
     cancelCookieClick(i, c) {
@@ -354,7 +323,9 @@ export default {
           category_id: cat.id
         }
       ).then(response => {})
-      .catch(error => {})
+      .catch(error => {
+        console.log(error.response.data)
+      })
 
       let params = {
         size: 100,
@@ -385,4 +356,3 @@ export default {
 }
 </script>
 
-<style></style>

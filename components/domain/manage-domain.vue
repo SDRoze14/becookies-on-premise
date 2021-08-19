@@ -6,11 +6,6 @@
     <div class="text-sm text-gray-500 mb-4 whitespace-pre-line">{{ $t('addDomain.description') }}
     </div>
 
-    <!-- <div class="mt-2">
-      <div>Name</div>
-      <base-input v-model="applicationName" placeholder="e.g. Web"></base-input>
-    </div> -->
-
     <div class="mt-2">
       <div>{{ $t('addDomain.labelName') }}</div>
       <base-input
@@ -59,14 +54,6 @@
       </div>
     </div>
 
-    <!-- <div class="mt-4">
-      <div>{{$t('addDomain.labelOrganization')}}</div>
-      <base-input
-        v-model="applicationName"
-        :placeholder="$t('addDomain.placOrganization')"
-      ></base-input>
-    </div> -->
-
     <div class="mt-4">
       <div>{{ $t('addDomain.labelDefaultLanguage') }}</div>
       <div class="w-40">
@@ -102,24 +89,6 @@
         </base-dropdown>
       </div>
     </div>
-
-    <!-- <div class="mt-6">
-      <div>Scan Frequency</div>
-      <div class="flex">
-        <div
-          v-for="(s, i) in frequencies"
-          :key="`frequency-${i}`"
-          class="py-1 px-6 mr-4 mt-2 border rounded-md text-sm cursor-pointer"
-          :class="{
-            'bg-blue-100 border-primary text-primary': s == scanFrequency,
-            ' bg-gray-200 border-gray-200 text-gray-500': s != scanFrequency,
-          }"
-          @click="scanFrequency = s"
-        >
-          {{ s }} Days
-        </div>
-      </div>
-    </div> -->
 
     <div
       v-if="error"
@@ -184,10 +153,10 @@ export default {
 
       // if (!self.applicationName) error = 'Please enter your Name.'
       // else
-      if (!self.domainName) error = self.$t('lang') == 'en' ? 'Please enter Domain Name.' : 'กรุณากรอกชื่อโดเมน'
+      if (!self.domainName) error = self.$t('addDomain.error_empty_domain')
       else if (!self.$model.validDomain(self.domainName))
-        error  = self.$t('lang') == 'en' ?  'Invalid Domain Name.' : 'ชื่อโนเมนไม่ถูกต้อง'
-      else if (!this.organization.id) error = self.$t('lang') == 'en' ? 'Please select Organization' : 'กรุณาเลือกองคืกรณ์'
+        error  = self.$t('addDomain.error_invalid_domain')
+      else if (!this.organization.id) error = self.$t('addDomain.error_empty_org')
 
       self.error = error
       if (error) return
@@ -207,11 +176,8 @@ export default {
             self.isShow = false
             self.$emit('updated', true)
           })
-          .catch((error) => {
-            var code = res.response.data.code
-            if (code == 'InvalidParameterException')
-              self.error = 'Password must have length greater than 6'
-            else self.error = 'Unknow error.'
+          .catch((err) => {
+           self.error = err.response.data.message
           })
       } else {
         await self.$api
@@ -227,8 +193,8 @@ export default {
             self.isShow = false
             self.$emit('added', true)
           })
-          .catch((error) => {
-              self.error = error.response.data.message
+          .catch((err) => {
+              self.error = err.response.data.message
           })
       }
 
@@ -238,4 +204,3 @@ export default {
 }
 </script>
 
-<style></style>

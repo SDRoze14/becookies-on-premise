@@ -219,7 +219,10 @@
     "placOrganization": "เลือกชื่อองค์กร",
     "labelDefaultLanguage": "ภาษาที่แสดง",
     "addBtn": "เพิ่มโดเมน",
-    "updateBtn": "อัพเดท Domain"
+    "updateBtn": "อัพเดท Domain",
+    "error_empty_domain": "กรุณากรอกชื่อโดเมน",
+    "error_invalid_domain": "ชื่อโนเมนไม่ถูกต้อง",
+    "error_empty_org": "กรุณาเลือกองค์กร"
   },
   "cancleBtn": "ยกเลิก",
   "confirmBtn": "ตกลง",

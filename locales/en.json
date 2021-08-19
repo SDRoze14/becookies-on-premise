@@ -219,7 +219,10 @@
     "placOrganization": "Select organization",
     "labelDefaultLanguage": "Default language",
     "addBtn": "Add Domain",
-    "updateBtn": "Update Domain"
+    "updateBtn": "Update Domain",
+    "error_empty_domain": "Please enter Domain Name.",
+    "error_invalid_domain": "Invalid Domain Name.",
+    "error_empty_org": "Please select Organization."
   },
   "cancleBtn": "Cancel",
   "confirmBtn": "Confirm",

@@ -11,7 +11,6 @@
       :class="{ 'bg-blue-100': selectId == a.id }"
     >
       <div class="text-sm truncate">{{ a.domain_name }}</div>
-      <!-- <div class="text-sm text-gray-400 truncate">{{ a.domain_name }}</div> -->
     </base-dropdown-item>
   </base-dropdown>
 </template>
@@ -68,5 +67,3 @@ export default {
   },
 }
 </script>
-
-<style></style>
