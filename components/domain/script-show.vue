@@ -25,7 +25,6 @@ export default {
     }
   },
   components: { ScriptView },
-  mounted() {},
   methods: {
     async show(app = {}) {
       const self = this

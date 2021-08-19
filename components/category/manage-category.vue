@@ -86,7 +86,6 @@ export default {
       return this.cat.categoryId ? true : false
     },
   },
-  mounted() {},
   methods: {
     show(cat = {}) {
       this.cat = cat

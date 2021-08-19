@@ -43,7 +43,6 @@ export default {
       else return 'primary'
     },
   },
-  mounted() {},
   methods: {
     show(title, description, callback) {
       this.title = title

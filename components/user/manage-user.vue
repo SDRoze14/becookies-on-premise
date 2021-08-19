@@ -74,7 +74,6 @@ export default {
       return this.user.userId ? true : false
     },
   },
-  mounted() {},
   methods: {
     show(user = {}) {
       this.user = user

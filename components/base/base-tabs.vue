@@ -40,7 +40,6 @@ export default {
     return {}
   },
   computed: {},
-  mounted() {},
   methods: {},
 }
 </script>

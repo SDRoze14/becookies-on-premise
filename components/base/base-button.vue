@@ -59,7 +59,6 @@ export default {
       } else return
     },
   },
-  mounted() {},
   methods: {},
 }
 </script>

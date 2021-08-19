@@ -44,7 +44,6 @@ export default {
     return {}
   },
   computed: {},
-  mounted() {},
   methods: {
     click() {
       this.$emit('update', this.inputValue)

@@ -15,7 +15,6 @@ export default {
     return {}
   },
   computed: {},
-  mounted() {},
   methods: {
     clickEvent(e) {
       this.parent.hide()

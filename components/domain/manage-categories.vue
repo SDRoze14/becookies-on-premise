@@ -92,7 +92,6 @@ export default {
       return isSelectAll
     },
   },
-  mounted() {},
   methods: {
     show(categoriesSelect) {
       this.isShow = true

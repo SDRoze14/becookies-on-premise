@@ -259,7 +259,6 @@ export default {
       return this.$store.getters['me/getRole']
     }
   },
-  mounted() {},
   methods: {
     async show(app = {}) {
       const self = this

@@ -58,7 +58,6 @@ export default {
       success: false,
     }
   },
-  mounted() {},
   methods: {
     async submitClick() {
       let self = this

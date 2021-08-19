@@ -167,7 +167,6 @@ export default {
       return this.$store.getters['organizations/getList']
     },
   },
-  mounted() {},
   methods: {
     show(app = {}) {
       this.app = app

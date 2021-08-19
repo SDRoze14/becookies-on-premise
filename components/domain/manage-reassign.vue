@@ -161,7 +161,6 @@ export default {
       return this.cookie.cookieId ? true : false
     },
   },
-  mounted() {},
   methods: {
     show(cookie = {}) {
       // this.cookie = cookie

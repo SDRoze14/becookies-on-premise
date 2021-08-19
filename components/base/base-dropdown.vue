@@ -106,7 +106,6 @@ export default {
       }`
     },
   },
-  mounted() {},
   methods: {
     openClick() {
       if (this.disabled) return
