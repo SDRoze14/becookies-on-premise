@@ -8,9 +8,6 @@
         {{ application.domain_name }}
       </div>
       <div class="space-x-2" v-if="role == 1000 || role == 10">
-        <!-- <base-button color="border-primary" @click="previewClick">
-          {{ $t('website.livePreview') }}
-        </base-button> -->
         <base-button color="primary" @click="saveClick">
           {{ $t('website.saveBtn') }}
         </base-button>
@@ -19,20 +16,10 @@
     <div
       class="flex items-center text-sm text-gray-400 font-light space-x-6 py-2"
     >
-      <!-- <div class="white">
-        Discover:
-        <span
-          v-if="application.status == 'complete'"
-          class="bg-green-100 text-green-400 text-xs px-3 py-1 rounded"
-          >Completed</span
-        >
-      </div> -->
       <div>
         Found:
         <span class="text-gray-800">{{ application.cookie_counts }}</span>
         {{ $t('website.cookie') }}
-        <!-- <span class="text-gray-800">{{ application.cookieChanges }}</span>
-        Cookies change -->
       </div>
       <div
         class="bg-gray-200 text-gray-500 py-1 px-4 rounded-full cursor-pointer"
@@ -55,7 +42,7 @@
         <!-- Banner -->
         <div v-show="tab == 0" class="p-4">
           <div class="text-xl mb-2">
-            {{ $t('lang') == 'en' ? 'Banner' : 'แบนเนอร์' }}
+            {{ $t('website.banner') }}
           </div>
           <div class="text-sm text-gray-500 mb-8">
             {{ $t('website.bannerDescription') }}​
@@ -64,26 +51,6 @@
           <!-- Layout -->
           <div class="text-lg mb-2">{{ $t('website.layout') }}​</div>
           <div class="mb-6 flex flex-wrap">
-            <!-- <div
-              v-for="(l, i) in $model.layouts"
-              :key="`layout-${i}`"
-              class="w-48 m-2 p-3 border rounded cursor-pointer"
-              :class="{
-                'bg-blue-100 border-primary':
-                  application.styles.templateType == l.value,
-                'bg-transparent border-transparent':
-                  application.styles.templateType != l.value,
-              }"
-              @click="application.styles.templateType = l.value"
-            >
-              <div>
-                <img class="w-full" :src="l.img" />
-              </div>
-              <div class="text-sm text-gray-600 mt-1">{{ l.title }}</div>
-              <div class="text-xs text-gray-400">
-                {{ l.des }}
-              </div>
-            </div> -->
 
             <div>
               <base-dropdown
@@ -159,9 +126,9 @@
 
           <div v-if="application.theme == 3">
             <!-- Color Banner -->
-            <div>{{ $t('lang') == 'en' ? 'Banner' : 'แบนเนอร์' }}</div>
+            <div>{{ $t('website.banner') }}</div>
             <div class="text-sm pt-3">
-              {{ $t('lang') == 'en' ? 'Background' : 'พื้นหลัง' }}
+              {{ $t('website.background') }}
             </div>
             <div class="flex py-3">
               <base-color-picker
@@ -186,7 +153,7 @@
 
             <!-- Color Button -->
             <div class="text-sm pt-3">
-              {{ $t('lang') == 'en' ? 'Button' : 'ปุ่ม' }}
+              {{ $t('website.btn') }}
             </div>
             <div class="flex py-3">
               <base-color-picker
@@ -339,9 +306,6 @@
                   label="Decline Additions text caption"
                 ></base-color-picker>
               </div>
-              <!-- <div class="flex pb-3">
-                
-              </div> -->
             </div>
           </div>
           <!-- End popup -->
@@ -500,42 +464,6 @@
           <div v-if="languages.length" class="max-w-screen-sm">
             <div class="py-2">
               <div class="flex items-end">
-                <!-- <div class="w-40 mr-4">
-                  <span class="text-gray-600 text-sm">{{
-                    $t('website.cookieNotice.language')
-                  }}</span>
-                  <base-dropdown toggleClass="w-full" :dropdownWidthFull="true">
-                    <div
-                      slot="toggle"
-                      class="py-2 px-3 border border-primary rounded text-sm text-primary flex justify-between items-center"
-                    >
-                      <div>
-                        {{
-                          $model.language(languages[selectLanguageIndex].key)
-                            .label
-                        }}
-                      </div>
-                      <base-icon
-                        class="ml-2"
-                        icon="dropdown"
-                        width="10"
-                        height="10"
-                      ></base-icon>
-                    </div>
-                    <base-dropdown-item
-                      v-for="(l, i) in $model.languages"
-                      :key="`language-${i}`"
-                      :class="{
-                        'active-language':
-                          l.key == languages[selectLanguageIndex].key,
-                        'disabled-language': useLanguages.includes(l.key),
-                      }"
-                      @click="changeLanguageDropdown(l.key)"
-                    >
-                      <div class="text-sm">{{ l.label }}</div>
-                    </base-dropdown-item>
-                  </base-dropdown>
-                </div> -->
                 <div class="flex-1">
                   <base-input
                     :label="$t('website.cookieNotice.bannerTitle')"
@@ -599,47 +527,6 @@
                   v-model="languages[selectLanguageIndex].detailDescription"
                 ></base-input>
               </div>
-
-              <!-- <div class="flex space-x-4">
-              <div class="flex-1 mt-4">
-                <base-input
-                  label="Allow All button text"
-                  v-model="languages[selectLanguageIndex].allowAllButton"
-                ></base-input>
-              </div>
-
-              <div class="flex-1 mt-4">
-                <base-input
-                  label="Manage Preference button text"
-                  v-model="
-                    languages[selectLanguageIndex].managePreferencesTitle
-                  "
-                ></base-input>
-              </div>
-            </div>
-            <div class="flex space-x-4">
-              <div class="flex-1 mt-4">
-                <base-input
-                  label="Preference Alway button text"
-                  v-model="languages[selectLanguageIndex].preferenceAlwayActive"
-                ></base-input>
-              </div>
-
-              <div class="flex-1 mt-4">
-                <base-input
-                  label="More Preference button text"
-                  v-model="languages[selectLanguageIndex].morePreferenceDetail"
-                ></base-input>
-              </div>
-            </div>
-            <div class="flex space-x-4">
-              <div class="flex-1 mt-4">
-                <base-input
-                  label="Confirm Chose button text"
-                  v-model="languages[selectLanguageIndex].confirmChoseButton"
-                ></base-input>
-              </div>
-            </div> -->
             </div>
 
             <!-- Consent settings -->
@@ -655,11 +542,6 @@
                 >
                   {{ $t('website.consentSetting.addBtn') }}
                 </base-button>
-                <!-- <a
-                  class="text-primary text-sm cursor-pointer"
-                  @click="manageCategoriesClick"
-                  >Manage Categories</a
-                > -->
               </div>
             </div>
 
@@ -717,60 +599,6 @@
               </div>
             </div>
             <!-- End Consent settings -->
-
-            <!-- <div class="mt-8">
-              <div class="flex items-end">
-                <div class="w-40 mr-4">
-                  <span class="text-gray-600 text-sm">{{
-                    $t('website.defualtLanguage.title')
-                  }}</span>
-                  <base-dropdown toggleClass="w-full" :dropdownWidthFull="true">
-                    <div
-                      slot="toggle"
-                      class="py-2 px-3 border border-primary rounded text-sm text-primary flex justify-between items-center"
-                    >
-                      <div v-if="availableLanguage.length > 1">
-                        {{ $model.language(application.defaultLanguage).label }}
-                      </div>
-                      <div v-else>
-                        {{ $model.language(availableLanguage[0]).label }}
-                      </div>
-                      <base-icon
-                        class="ml-2"
-                        icon="dropdown"
-                        width="10"
-                        height="10"
-                      ></base-icon>
-                    </div>
-                    <base-dropdown-item
-                      v-for="(l, i) in availableLanguage"
-                      :key="`language-${i}`"
-                      :class="{
-                        'active-language': l == application.defaultLanguage,
-                      }"
-                      @click="application.defaultLanguage = l"
-                    >
-                      <div class="text-sm" v-if="l == 'th'">Thai</div>
-                      <div class="text-sm" v-if="l == 'en'">English</div>
-                    </base-dropdown-item>
-                  </base-dropdown>
-                </div>
-
-                <div class="flex-1">
-                  <base-check
-                    v-model="application.autoLanguageDetection"
-                    :label="$t('website.defualtLanguage.checkbox')"
-                    class="text-sm text-gray-500 font-light mb-2"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div class="mt-6">
-              <div class="text-sm text-gray-500 font-light">
-                {{ $t('website.defualtLanguage.description') }}
-              </div>
-            </div> -->
           </div>
           <!-- end Languages -->
         </div>
@@ -842,13 +670,6 @@
                                     : 'title'
                                 }}
                               </div>
-                              <!-- <div>
-                                <base-icon
-                                  icon="logo-h-white"
-                                  width="50"
-                                  height="20"
-                                ></base-icon>
-                              </div> -->
                             </div>
                             <div class="flex w-full items-end">
                               <div class="w-4/6">
@@ -909,11 +730,6 @@
                                 : 'title'
                             }}
                           </div>
-                          <!-- <base-icon
-                            icon="logo-h-white"
-                            width="50"
-                            height="20"
-                          ></base-icon> -->
                         </div>
                         <div class="flex w-full items-end text-white">
                           <div class="w-3/6">
@@ -986,20 +802,6 @@
                                     : 'title'
                                 }}
                               </div>
-                              <!-- <div v-if="!logoBase64">
-                                <base-icon
-                                  icon="logo-h-white"
-                                  width="50"
-                                  height="20"
-                                ></base-icon>
-                              </div>
-                              <div v-else class="h-4">
-                                <img
-                                  style="height: 20px"
-                                  v-bind:src="`${logoBase64}`"
-                                  alt=""
-                                />
-                              </div> -->
                             </div>
                             <div class="flex w-full items-end">
                               <div class="w-4/6">
@@ -1058,11 +860,6 @@
                                 : 'title'
                             }}
                           </div>
-                          <!-- <base-icon
-                            icon="logo-h-white"
-                            width="50"
-                            height="20"
-                          ></base-icon> -->
                         </div>
                         <div class="flex w-full items-end">
                           <div class="w-3/6">
@@ -1256,11 +1053,6 @@
                       <div
                         class="flex w-full py-1 justify-between items-center"
                       >
-                        <!-- <base-icon
-                          icon="logo-h-white"
-                          width="50"
-                          height="20"
-                        ></base-icon> -->
                         <div
                           class="w-3 h-3 bg-white rounded-full flex justify-center items-center"
                         >
@@ -1387,11 +1179,6 @@
                       <div
                         class="flex w-full py-1 justify-between items-center"
                       >
-                        <!-- <base-icon
-                          icon="logo-h-white"
-                          width="50"
-                          height="20"
-                        ></base-icon> -->
                         <div
                           class="w-3 h-3 bg-white rounded-full flex justify-center items-center"
                         >
@@ -1591,9 +1378,8 @@ export default {
     availableLanguages() {
       const self = this
       const langs = []
-      for (var i = 0; i < self.$model.languages.length; i++) {
-        const l = self.$model.languages[i]
-
+      for (let lang of self.$model.languages) {
+        const l = lang
         if (!self.useLanguages.includes(l.key)) {
           langs.push(l.key)
         }
@@ -1695,10 +1481,6 @@ export default {
     async fetch() {
       const self = this
       self.$store.dispatch('loading/setLoading', true)
-      let params = {
-        organization_id: self.organization_id,
-      }
-      // await self.$store.dispatch('application/fetch', params)
 
       // fetch application
       await self.$api
@@ -1713,7 +1495,9 @@ export default {
       await self.$api.getSummary(self.id).then((response) => {
         self.application.cookie_counts = response.data.cookie_counts
       })
-      .catch(() => {})
+      .catch((err) => {
+        console.log(err.response.data)
+      })
 
       // fetch template
       await self.$api
@@ -1727,61 +1511,37 @@ export default {
           }
           // Banner color
           let color_banner = self.application.theme_color.banner
-          self.banner.bg_color_1.hex8 = color_banner.background_color_1
-            ? color_banner.background_color_1
-            : '#3794fc'
-          self.banner.bg_color_2.hex8 = color_banner.background_color_2
-            ? color_banner.background_color_2
-            : '#1269cb'
-          self.banner.text_color.hex8 = color_banner.text_color
-            ? color_banner.text_color
-            : '#ffffff'
-          self.banner.accept_button_backgound_color.hex8 = color_banner.accept_button_backgound_color
-            ? color_banner.accept_button_backgound_color
-            : '#ffffff'
-          self.banner.accept_button_text_color.hex8 = color_banner.accept_button_text_color
-            ? color_banner.accept_button_text_color
-            : '#1269cb'
-          self.banner.reject_button_backgound_color.hex8 = color_banner.reject_button_backgound_color
-            ? color_banner.reject_button_backgound_color
-            : '#ffffff'
-          self.banner.reject_button_text_color.hex8 = color_banner.reject_button_text_color
-            ? color_banner.reject_button_text_color
-            : '#1269cb'
+          self.banner.bg_color_1.hex8 = color_banner.background_color_1 || '#3794fc' 
+          self.banner.bg_color_2.hex8 = color_banner.background_color_2 || '#1269cb'
+          self.banner.text_color.hex8 = color_banner.text_color || '#ffffff'
+          self.banner.accept_button_backgound_color.hex8 = color_banner.accept_button_backgound_color || '#ffffff'
+          self.banner.accept_button_text_color.hex8 = color_banner.accept_button_text_color || '#1269cb'
+          self.banner.reject_button_backgound_color.hex8 = color_banner.reject_button_backgound_color || '#ffffff'
+          self.banner.reject_button_text_color.hex8 = color_banner.reject_button_text_color || '#1269cb'
 
           // Popup color
           let color_popup = self.application.theme_color.popup
-          self.popup.background_color.hex8 = color_popup.background_color
-            ? color_popup.background_color
-            : '#1269cb'
-          self.popup.text_color.hex8 = color_popup.text_color
-            ? color_popup.text_color
-            : '#ffffff'
-          self.popup.accept_button_backgound_color.hex8 = color_popup.accept_button_backgound_color
-            ? color_popup.accept_button_backgound_color
-            : '#1269cb'
-          self.popup.accept_button_text_color.hex8 = color_popup.accept_button_text_color
-            ? color_popup.accept_button_text_color
-            : '#ffffff'
-          self.popup.reject_button_backgound_color.hex8 = color_popup.reject_button_backgound_color
-            ? color_popup.reject_button_backgound_color
-            : '#e6e6e6'
-          self.popup.reject_button_text_color.hex8 = color_popup.reject_button_text_color
-            ? color_popup.reject_button_text_color
-            : '#57697b'
+          self.popup.background_color.hex8 = color_popup.background_color || '#1269cb'
+          self.popup.text_color.hex8 = color_popup.text_color || '#ffffff'
+          self.popup.accept_button_backgound_color.hex8 = color_popup.accept_button_backgound_color || '#1269cb'
+          self.popup.accept_button_text_color.hex8 = color_popup.accept_button_text_color || '#ffffff'
+          self.popup.reject_button_backgound_color.hex8 = color_popup.reject_button_backgound_color || '#e6e6e6'
+          self.popup.reject_button_text_color.hex8 = color_popup.reject_button_text_color || '#57697b'
 
           self.privacy_notice_link = self.application.privacy_notice_link
           const data = response.data
           const availableLanguage = self.application.available_languages
           const langs = availableLanguage
 
-          await self.$api.getApplicationCategories(self.id).then((response) => {
-            data.categories = response.data.entities
+          await self.$api.getApplicationCategories(self.id).then((response_app_cate) => {
+            data.categories = response_app_cate.data.entities
           })
 
-          await self.$api.getTemplateLogo(self.id).then((response) => {
-            self.logoBase64 = `data:image/png;base64,${response.data.image_base64}`
-          }).catch(() => {})
+          await self.$api.getTemplateLogo(self.id).then((response_template_logo) => {
+            self.logoBase64 = `data:image/png;base64,${response_template_logo.data.image_base64}`
+          }).catch((err) => {
+            console.log(err.response.data)
+          })
 
           const consentRules = data.categories
           const cats = Object.keys(consentRules)
@@ -1816,6 +1576,7 @@ export default {
           self.categoriesSelect = categoriesSelect
         })
         .catch((error) => {
+          console.log(error.response.data)
         })
 
       self.$store.dispatch('loading/setLoading', false)
@@ -1849,8 +1610,9 @@ export default {
           id: consentRules[c].id,
         })
       })
-
-      const language = {
+      
+      const language = {}
+      language = {
         key: lang,
         title: contents.banner.title[lang],
         description: contents.banner.description[lang],
@@ -1885,7 +1647,8 @@ export default {
         .then((response) => {
           self.script.header = response.data
         })
-        .catch((eror) => {
+        .catch((error) => {
+          console.log(error.response.data)
         })
       self.$store.dispatch('loading/setLoading', false)
     },
@@ -1905,17 +1668,6 @@ export default {
       this.$refs.manageCategories.show(this.categoriesSelect)
     },
     async fetchInitialLanguages() {
-      const self = this
-      // if (!self.initialLanguages) {
-      //   self.$store.dispatch('loading/setLoading', true)
-      //   await self.$api
-      //     .initialLanguages()
-      //     .then((response) => {
-      //       self.initialLanguages = response.data
-      //     })
-      //     .catch((error) => {})
-      //   self.$store.dispatch('loading/setLoading', false)
-      // }
     },
     async addLanguageClick(lang) {
       const self = this
@@ -1924,18 +1676,6 @@ export default {
       self.availableLanguage.push(lang)
 
       let data = self.application
-
-      // await self.$api.getApplicationCategories(self.id).then((response) => {
-      //   data.categories = response.data.entities
-      // })
-
-      // const consentRules = data.categories
-      // const cats = Object.keys(consentRules)
-
-      // self.consentRules = consentRules
-
-      // load initial language
-      // await self.fetchInitialLanguages()
 
       const language = self.fetchLanguageObject(data, lang)
 
@@ -2100,10 +1840,6 @@ export default {
 
       // language
       self.languages.forEach((l) => {
-        // if (!l.description) {
-
-        // }
-        // console.log(l.allowAllButton)
         data.content.banner.title[l.key] = l.title
         data.content.banner.description[l.key] = l.description
         data.content.banner.cookie_setting[l.key] = l.cookieSetting
@@ -2142,7 +1878,7 @@ export default {
                   : self.categoriesSelect[i].default,
             }
           consentRules[c.key].title[l.key] = c.title
-          ;(consentRules[c.key].description[l.key] = c.description),
+          ;(consentRules[c.key].description[l.key] = c.description)
             (consentRules[c.key].id = c.id)
         })
       })
@@ -2159,20 +1895,20 @@ export default {
       let categories = data.categories
 
       if (self.availableLanguage.includes('en')) {
-        if (!data.content.banner.title.en) error = self.$t('lang') == 'en' ? 'Please enter English Banner title.' : 'กรุณากรอกหัวข้อแบนเนอร์ภาษาอังกฤษ'
-        else if (!data.content.banner.description.en) error = self.$t('lang') == 'en' ? 'Please enter English Banner description.' : 'กรุณากรอกรายละเอียดแบนเนอร์ภาษาอังกฤษ'
-        else if (!data.content.banner.cookie_setting.en) error = self.$t('lang') == 'en' ? 'Please enter text English in Setting button.' : 'กรุณากรอกข้อความภาษาอังกฤษในปุ่มการตั้งค่า'
-        else if (!data.content.banner.accept_button.en) error = self.$t('lang') == 'en' ? 'Please enter text English in Accept button.' : 'กรุณากรอกข้อความภาษาอังกฤษในปุ่มอยมรับ'
-        else if (!data.content.banner.reject_button.en) error = self.$t('lang') == 'en' ? 'Please enter text English in Reject button.' : 'กรุณากรอกข้อความภาษาอังกฤษในปุ่มปฏิเสธ'
+        if (!data.content.banner.title.en) error = self.$t('website.err_empty_en.banner_title')
+        else if (!data.content.banner.description.en) error = self.$t('website.err_empty_en.banner_des')
+        else if (!data.content.banner.cookie_setting.en) error = self.$t('website.err_empty_en.banner_cookie_setting')
+        else if (!data.content.banner.accept_button.en) error = self.$t('website.err_empty_en.banner_btn_accept')
+        else if (!data.content.banner.reject_button.en) error = self.$t('website.err_empty_en.banner_btn_reject')
         
 
       }
       if (self.availableLanguage.includes('th')) {
-        if (!data.content.banner.title.th) error = self.$t('lang') == 'en' ? 'Please enter Thai Banner title.' : 'กรุณากรอกหัวข้อแบนเนอร์ภาษาไทย'
-        else if (!data.content.banner.description.th) error = self.$t('lang') == 'en' ? 'Please enter Thai Banner description.' : 'กรุณากรอกรายละเอียดแบนเนอร์ภาษาไทย'
-        else if (!data.content.banner.cookie_setting.th) error = self.$t('lang') == 'en' ? 'Please enter text Thai in Setting button.' : 'กรุณากรอกข้อความภาษาไทยในปุ่มการตั้งค่า'
-        else if (!data.content.banner.accept_button.th) error = self.$t('lang') == 'en' ? 'Please enter text Thai in Accept button.' : 'กรุณากรอกข้อความภาษาไทยในปุ่มอยมรับ'
-        else if (!data.content.banner.reject_button.th) error = self.$t('lang') == 'en' ? 'Please enter text Thai in Reject button.' : 'กรุณากรอกข้อความภาษาไทยในปุ่มปฏิเสธ'
+        if (!data.content.banner.title.th) error = self.$t('website.err_empty_th.banner_title')
+        else if (!data.content.banner.description.th) error = self.$t('website.err_empty_th.banner_des')
+        else if (!data.content.banner.cookie_setting.th) error = self.$t('website.err_empty_th.banner_cookie_setting')
+        else if (!data.content.banner.accept_button.th) error = self.$t('website.err_empty_th.banner_title')
+        else if (!data.content.banner.reject_button.th) error = self.$t('website.err_empty_th.banner_btn_reject')
       }
 
       if (error) {
@@ -2205,9 +1941,9 @@ export default {
         await self.$api
           .updateTemplateLogo(self.id, data_img)
           .then((response) => {})
-          .catch((error) => {
+          .catch((err) => {
             self.$toast.open({
-              message: error.response.data.message,
+              message: err.response.data.message,
               type: 'error',
               duration: 6000,
             })
@@ -2218,26 +1954,20 @@ export default {
           domian_name: self.application.domian_name,
           name: self.application.domian_name,
         })
-        .then(() => {})
-        .catch(() => {})
 
       await self.$api
         .updateApplicationTemplate(self.id, data)
         .then((response) => {
           self.$toast.open({
             message:
-              self.$t('lang') == 'en'
-                ? 'Save changed successfully'
-                : 'บันทึกการเปลี่ยนแปลงสำเร็จ',
+              self.$t('website.success'),
             type: 'success',
             duration: 6000,
           })
         })
-        .catch((error) => {
+        .catch((err) => {
           self.$toast.open({
-            message: error.response.data
-              ? error.response.data.message
-              : error.response.statusText,
+            message: err.response.data.message,
             type: 'error',
             duration: 6000,
           })
@@ -2339,8 +2069,8 @@ export default {
 
       self.logo = droppedFiles[0]
       var reader = new FileReader()
-      reader.onload = function (e) {
-        self.logoBase64 = e.target.result
+      reader.onload = function (el) {
+        self.logoBase64 = el.target.result
       }
 
       reader.readAsDataURL(self.logo)

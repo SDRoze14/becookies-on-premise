@@ -12,7 +12,6 @@ const _1a6c8258 = () => interopDefault(import('../pages/login.vue' /* webpackChu
 const _062b665a = () => interopDefault(import('../pages/policy.vue' /* webpackChunkName: "pages/policy" */))
 const _1443efee = () => interopDefault(import('../pages/reports.vue' /* webpackChunkName: "pages/reports" */))
 const _43cf4d7c = () => interopDefault(import('../pages/signup/index.vue' /* webpackChunkName: "pages/signup/index" */))
-const _1fe94382 = () => interopDefault(import('../pages/signup25032021/index.vue' /* webpackChunkName: "pages/signup25032021/index" */))
 const _0a7ac514 = () => interopDefault(import('../pages/terms.vue' /* webpackChunkName: "pages/terms" */))
 const _1ecf82af = () => interopDefault(import('../pages/user/index.vue' /* webpackChunkName: "pages/user/index" */))
 const _174f8d48 = () => interopDefault(import('../pages/websites/index.vue' /* webpackChunkName: "pages/websites/index" */))
@@ -66,10 +65,6 @@ export const routerOptions = {
     component: _43cf4d7c,
     name: "signup___th"
   }, {
-    path: "/signup25032021",
-    component: _1fe94382,
-    name: "signup25032021___th"
-  }, {
     path: "/terms",
     component: _0a7ac514,
     name: "terms___th"
@@ -109,10 +104,6 @@ export const routerOptions = {
     path: "/en/signup",
     component: _43cf4d7c,
     name: "signup___en"
-  }, {
-    path: "/en/signup25032021",
-    component: _1fe94382,
-    name: "signup25032021___en"
   }, {
     path: "/en/terms",
     component: _0a7ac514,

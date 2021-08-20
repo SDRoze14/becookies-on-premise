@@ -215,7 +215,25 @@
       "title": "Default Language",
       "checkbox": "Auto detect user language",
       "description": "Enable automatic language detection to show the consent dialog in the website user's preferred language. If you haven't created a language variant that matches the user's preferred language, the default language variant will be shown."
-    }
+    },
+    "banner": "Banner",
+    "background": "Background",
+    "btn": "ปุ่ม",
+    "err_empty_en": {
+      "banner_title": "Please enter English Banner title.",
+      "banner_des": "Please enter English Banner description.",
+      "banner_cookie_setting": "Please enter text English in Setting button.",
+      "banner_btn_accept": "Please enter text English in Accept button.",
+      "banner_btn_reject": "Please enter text English in Reject button."
+    },
+    "err_empty_th": {
+      "banner_title": "Please enter Thai Banner title.",
+      "banner_des": "Please enter Thai Banner description.",
+      "banner_cookie_setting": "Please enter text Thai in Setting button.",
+      "banner_btn_accept": "Please enter text Thai in Accept button.",
+      "banner_btn_reject": "Please enter text Thai in Reject button."
+    },
+    "success": "Save changed successfully"
   },
   "addDomain": {
     "new": "New Domain",

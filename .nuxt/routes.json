@@ -48,12 +48,6 @@
     "chunkName": "pages/signup/index"
   },
   {
-    "name": "signup25032021___th",
-    "path": "/signup25032021",
-    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/signup25032021/index.vue",
-    "chunkName": "pages/signup25032021/index"
-  },
-  {
     "name": "terms___th",
     "path": "/terms",
     "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/terms.vue",
@@ -112,12 +106,6 @@
     "path": "/en/signup",
     "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/signup/index.vue",
     "chunkName": "pages/signup/index"
-  },
-  {
-    "name": "signup25032021___en",
-    "path": "/en/signup25032021",
-    "component": "/Users/nanthawat/Documents/dev/sonarqube/becookies-on-premise/pages/signup25032021/index.vue",
-    "chunkName": "pages/signup25032021/index"
   },
   {
     "name": "terms___en",

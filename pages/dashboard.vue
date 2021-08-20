@@ -485,7 +485,7 @@ export default {
         })
       })
 
-      await res.forEach(e => {
+      res.forEach(e => {
         data.forEach(d => {
           if (d.id == e.id) {
             e.data_reject = d.none_count
@@ -495,7 +495,7 @@ export default {
         })
       })
 
-      await res.forEach((e, i) => {
+      res.forEach((e, i) => {
         data_accept.push(e.data_accept)
         data_reconsent.push(e.data_reconsent)
         data_reject.push(e.data_reject)

@@ -14,32 +14,15 @@
         <div class="w-56 pr-4">
           <base-input v-model="q" :placeholder="$t('search')"></base-input>
         </div>
-        <!-- <div>
-          <base-dropdown
-            :text="`Status: ${$model.userStatus(status).label}`"
-            :dropdownWidthFull="true"
-          >
-            <base-dropdown-item
-              v-for="(s, i) in $model.user_status"
-              :key="`status-${i}`"
-              @click="status = s.value"
-            >
-              {{ s.label }}
-            </base-dropdown-item>
-          </base-dropdown>
-        </div> -->
       </div>
 
       <div class="table-custom">
         <table>
           <thead>
             <th id="index">#</th>
-            <!-- <th>{{$t('user.name')}}</th> -->
             <th id="email">{{$t('user.email')}}</th>
-            <!-- <th>{{$t('user.phone')}}</th> -->
             <th id="access">{{$t('user.access')}}</th>
             <th id="role">Role</th>
-            <!-- <th>Status</th> -->
             <th id="manage"></th>
           </thead>
           <tbody class="divide-y divide-gray-100">
@@ -47,9 +30,6 @@
               <td>
                 {{ i + 1 }}
               </td>
-              <!-- <td>{{ u.name }}</td> -->
-              <td>{{ u.user.email ? u.user.email : `${u.user.first_name} ${u.user.last_name}` }}</td>
-              <!-- <td>-</td> -->
               <td>
                 {{ $model.getDateTime(u.user.updatedAt) }}
               </td>
@@ -63,24 +43,7 @@
                 <div class="text-orange-400" v-else-if="u.role == 1">
                   Viewer
                 </div>
-                <!-- <div class="text-green-400" v-else-if="u.role == 'member'">
-                  Member
-                </div> -->
               </td>
-              <!-- <td>
-                <div
-                  v-if="u.isActive"
-                  class="px-2 py-1 text-xs bg-green-200 text-green-500 rounded text-center"
-                >
-                  Active
-                </div>
-                <div
-                  v-else
-                  class="px-2 py-1 text-xs bg-red-200 text-red-500 rounded text-center"
-                >
-                  Inactive
-                </div>
-              </td> -->
               <td class="w-20 text-center" v-if="role_user == 1000 || role_user == 10">
                 <base-dropdown
                   dropdownClass="w-32 text-gray-700"
@@ -100,12 +63,6 @@
                   <base-dropdown-item class="bg-red-50 text-red-500 hover:bg-red-200" @click="deleteUserClick(u)">
                     Delete
                   </base-dropdown-item>
-                  <!-- <base-dropdown-item @click="editClick(u)" class="z-50">
-                    Edit
-                  </base-dropdown-item> -->
-                  <!-- <base-dropdown-item @click="statusToggleClick(u)">
-                    {{ u.status == 'complete' ? 'Disable' : 'Enable' }}
-                  </base-dropdown-item> -->
                 </base-dropdown>
               </td>
             </tr>
@@ -134,16 +91,14 @@ export default {
       var list = this.$store.getters['user/getList']
       if (self.q) {
         list = list.filter((e) => {
-          if (e.user.email && e.user.email.toLowerCase().search(self.q.toLowerCase()) > -1)
-            return true
-          else return false
+          return (e.user.email && e.user.email.toLowerCase().search(self.q.toLowerCase()) > -1)
+            ? true :false
         })
       }
 
       if (self.status) {
         list = list.filter((e) => {
-          if (e.isActive == self.status) return true
-          else return false
+          return (e.isActive == self.status) ? true : false
         })
       }
       return list
@@ -153,12 +108,10 @@ export default {
     },
     check_user() {
       let user = this.$store.getters['me/getUser']
-      if (user.ldap_username) return false
-      else return true
+      return (user.ldap_username) ? false : true
     },
     role_user() {
-      let role = this.$store.getters['me/getRole']
-      return role
+      return this.$store.getters['me/getRole']
     }
   },
   data() {
@@ -203,8 +156,6 @@ export default {
           async function () {
             // self.$store.dispatch('loading/setLoading', true)
             await self.$api.deleteUserFromOrganization(self.organization_id, item.id)
-              .then(() => {})
-              .catch(() => {})
             
             self.fetch()
           }
@@ -217,8 +168,6 @@ export default {
           async function () {
             self.$store.dispatch('loading/setLoading', true)
             await self.$api.deleteUserFromOrganization(self.organization_id, item.user.id)
-              .then(() => {})
-              .catch(() => {})
               
             self.fetch()
           }

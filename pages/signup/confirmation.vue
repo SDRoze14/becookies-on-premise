@@ -1,7 +1,6 @@
 <template>
   <div class="text-center">
     <div>
-      <!-- <base-icon icon="logo-h" width="300" height="40"></base-icon> -->
     </div>
     <div v-if="!confirm" class="text-3xl mb-2">{{$t('lang') == 'en' ? 'Confirm Registration' : 'ยืนยันการสมัคร'}}</div>
     <div v-if="confirm" class="text-3xl mb-2">{{$t('lang') == 'en' ? 'You are all set!' : 'ท่านได้ทำการสมัครเรียบร้อยแล้ว'}}</div>
