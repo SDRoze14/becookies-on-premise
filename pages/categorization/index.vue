@@ -223,13 +223,12 @@ export default {
       var list = this.$store.getters['category/getList']
       if (self.q) {
         list = list.filter((e) => {
-          if (
+          return (
             e.categoryName.toLowerCase().search(self.q.toLowerCase()) > -1 ||
             e.categoryIntroduction.toLowerCase().search(self.q.toLowerCase()) >
               -1
           )
-            return true
-          else return false
+            ? true : false
         })
       }
       return list
@@ -239,9 +238,8 @@ export default {
       var list = this.$store.getters['reassign/getList']
       if (self.cookieQ) {
         list = list.filter((e) => {
-          if (e.name.toLowerCase().search(self.cookieQ.toLowerCase()) > -1)
-            return true
-          else return false
+          return (e.name.toLowerCase().search(self.cookieQ.toLowerCase()) > -1)
+            ? true : false
         })
       }
       return list
@@ -318,3 +316,5 @@ export default {
   },
 }
 </script>
+
+<style></style>

@@ -36,7 +36,15 @@
     "accept": "I accept the",
     "comfirmation": "Your registration has been confirmed",
     "labelOrganization": "Organization",
-    "placeholderOrganization": "Organization Name"
+    "placeholderOrganization": "Organization Name",
+    "btn_submit": "Sign up",
+    "err_email": "Email invalid or not match to \"ac.th\", \"co.th\", \"or.th\" and \"go.th\"",
+    "err_empty_email": "Please enter your email.",
+    "err_invalid_email": "Invalid your email.",
+    "err_empty_domain": "Please enter your domain name.",
+    "err_invalid_domain": "Invalid Domain Name.",
+    "err_empty_org": "Please enter organization",
+    "err_email_already": "This Email has been registered"
   },
   "stepUse": {
     "title": "Steps to use beCOOKIES Script",
@@ -427,5 +435,35 @@
     "text1": "You have registered already.",
     "text2": "Please check your email for verifying your account.",
     "copy": "Copy to clipboard."
+  },
+  "pass": {
+    "change": {
+      "title": "hange Password",
+      "new": "New Password*",
+      "confirm": "Confirm New Password*",
+      "btn_submit": "Submit",
+      "text_success": "Change password successfully, please login agian.",
+      "goto": "Go to",
+      "text_login": "Login",
+      "err_empty_new": "Please enter new password",
+      "err_empty_confirm": "Please enter confirm new password",
+      "err_not_match": "New password and confirm new password do not match",
+      "success": "Change password successfully",
+      "not_success": "Change password is not success",
+      "somthing_wrong": "Something wrong. Please try again"
+    },
+    "reset": {
+      "title": "Create New Password",
+      "msg_success": "New Password Created",
+      "new": "New Password*",
+      "confirm": "Confirm New Password*",
+      "btn_submit": "Submit",
+      "text_login": "Login",
+      "err_empty_new": "Please enter new password",
+      "err_empty_confirm": "Please enter confirm new password",
+      "err_not_match": "New password and confirm new password do not match",
+      "sucess": "Reset password successfully",
+      "somthing_wrong": "Something wrong. Please try again"
+    }
   }
 }

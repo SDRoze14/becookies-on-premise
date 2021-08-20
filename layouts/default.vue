@@ -133,7 +133,6 @@
             >
             <div>✦</div>
             <nuxt-link :to="localePath('policy')">Privacy Policy</nuxt-link>
-            <!-- <div>{{$t('privacyPolicy')}}</div> -->
           </div>
         </div>
       </div>

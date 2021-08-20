@@ -157,8 +157,7 @@ export default {
   },
   computed: {
     homeCheck() {
-      if (this.$route.path == "/" || this.$route.path == "/th") return true;
-      else return false;
+      return (this.$route.path == "/" || this.$route.path == "/th") ? true : false
     },
     logined() {
       let token = localStorage.getItem("token");

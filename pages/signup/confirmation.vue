@@ -74,10 +74,10 @@ export default {
           self.confirm = true
           self.$store.dispatch('loading/setLoading', false)
         })
-        .catch(error => {
+        .catch(err => {
           self.message = ''
           
-          self.error = error.response.data.message
+          self.error = err.response.data.message
           self.confirm = false
           
           self.$store.dispatch('loading/setLoading', false)

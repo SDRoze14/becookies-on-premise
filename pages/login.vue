@@ -6,7 +6,6 @@
           <div class="text-3xl mr-2">
             {{ $t('lang') == 'en' ? 'Login' : 'เข้าสู่ระบบ' }}
           </div>
-          <!-- <div class="text-2xl mt-1">beCOOKIES</div> -->
         </div>
         <form @submit="loginSubmit">
           <div class="mb-4">
@@ -31,11 +30,6 @@
               v-model="password"
             ></base-input>
           </div>
-          <!-- <div class="mb-4 text-right">
-            <nuxt-link to="/forgot" class="text-primary text-sm">
-              Forgot password ?
-            </nuxt-link>
-          </div> -->
 
           <div
             v-if="error"
@@ -45,12 +39,6 @@
           </div>
 
           <div class="flex items-center">
-            <!-- <div
-              class="mr-auto cursor-pointer text-primary text-sm"
-              @click="forgotPassClick"
-            >
-              {{ $t('lang') == 'en' ? 'Forgot password?' : 'ลืมรหัสผ่าน?' }}
-            </div> -->
             <base-button class="ml-auto" type="submit">{{
               $t('lang') == 'en' ? 'LOGIN' : 'เข้าสู่ระบบ'
             }}</base-button>
@@ -67,12 +55,6 @@
             }}
           </p>
           <div class="flex items-center justify-center">
-            <!-- <nuxt-link to="/signup" class="text-primary text-sm mr-6">
-              New user ?
-            </nuxt-link>
-            <nuxt-link to="/signup">
-              <base-button color="border-primary">Sign up here!</base-button>
-            </nuxt-link> -->
           </div>
         </div>
       </div>
@@ -111,7 +93,7 @@ export default {
       const self = this
 
       self.error = ''
-      let type = 0
+      let type = null
 
       if (self.$model.validateEmail(self.email)) type = 0
       else type = 1 

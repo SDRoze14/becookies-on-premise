@@ -10,16 +10,6 @@
         />
       </div>
 
-      <!-- <base-dropdown :text="month.text" class="ml-auto mr-4">
-        <base-dropdown-item
-          v-for="(a, i) in months"
-          :key="`month-${i}`"
-          @click="selectMonthClick(a)"
-        >
-          <div class="text-sm">{{ a.text }}</div>
-        </base-dropdown-item>
-      </base-dropdown> -->
-
       <base-button color="border-green" class="ml-auto">
         Export
         <base-icon width="22" height="20" class="ml-4" icon="excel"></base-icon>

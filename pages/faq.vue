@@ -2,14 +2,6 @@
   <div class="h-full">
     <div class="flex mx-0 sm:mx-5">
       <div class="px-2 py-10 w-full bg-white mb-8 rounded-lg">
-        <!-- <div class="pb-5">
-          <button
-            class="border hover:border-black rounded-full px-2 text-gray-400 hover:text-black"
-            @click="backHomeClick()"
-          >
-            Home
-          </button>
-        </div> -->
         <p class="pb-8">{{$t('lang') == 'en' ? 'Frequently Asked Questions' : 'คำถามที่พบบ่อย' }}</p>
 
         <div class="py-2">

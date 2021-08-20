@@ -152,12 +152,6 @@
               >
             </base-dropdown>
           </div>
-          <!-- <div
-            class="w-20 ml-auto cursor-pointer items-center text-center border rounded-full border-primary hover:bg-blue-200 hover:font-normal"
-            @click="exportClick()"
-          >
-            <p class="font-light text-primary text-sm">Export</p>
-          </div> -->
         </div>
       </div>
       <div class="table-custom text-sm">
@@ -171,7 +165,6 @@
             <th id="user agent">User Agent</th>
             <th id="consent type">Consent Type</th>
             <th id="ref">Ref. URL</th>
-            <!-- <th>Action</th> -->
           </thead>
           <tbody class="divide-y divide-gray-100">
             <tr v-for="(item, i) in consent_logs" :key="i">
@@ -220,10 +213,8 @@
 </template>
 
 <script>
-// import PDF from '@/pdf/export_pdf.js'
 import jsPDF from 'jspdf'
 import domtoimage from "dom-to-image";
-// import logo  from '@/assets/img/logo-becookies.png'
 export default {
   middleware: 'auth',
   computed: {
@@ -244,25 +235,17 @@ export default {
         this.application.rejectedCount +
         this.application.partialAcceptedCount
       return this.application.pageViews != 0
-        ? (sum_res / this.application.pageViews) * 100
+        ? `${(sum_res / this.application.pageViews) * 100}`
         : '0%'
     },
     fecth_xaxis_categories() {
       return this.xaxis_categories.slice()
-      // return
     },
     categories() {
-      let list = this.$store.getters['category/getList']
-      return list
+      return this.$store.getters['category/getList']
     },
     boxs() {
       return [
-        // {
-        //   title: 'Page views',
-        //   count: this.application.pageViews,
-        //   label: 'Page Views Today',
-        //   icon: 'eye',
-        // },
         {
           title: 'Cookies',
           count: this.summary.cookie_counts,
@@ -307,7 +290,7 @@ export default {
       let xaxis = []
 
       for (let i=0; i<num; i++) {
-        xaxis.push(`${y}-${m < 10 ? `0${m}` : m}-${i < 9 ? `0${i+1}` : i+1 }`)
+        xaxis.push(`${y}-${m}-${i+1}`)
       }
       //  console.log(num)
       return xaxis
@@ -378,25 +361,12 @@ export default {
     this.max_date_filter = this.$model.getDateInput(now)
     this.month = this.month_now
     this.options.xaxis.categories = this.xaxis_of_month
-    // console.log(this.options.xaxis.categories)
-    // .forEach(e => {
-    //   this.options.xaxis.categories.push(e)
-    // })
-
-    // let m = new Date(this.month).getMonth()
-    // let y = new Date(this.month).getFullYear()
-
-    // let date = this.daysInMonth(m, y)
-    // console.log(this.series_of_month)
     this.fetch()
     this.$store.dispatch('loading/setLoading', false)
   },
   methods: {
     async selectApplication(a) {
       this.application = a
-      // localStorage.setItem('application', JSON.stringify(a))
-      // let app = localStorage.getItem('application')
-      // this.application = JSON.parse(app)
       await this.fetch()
       await this.fetchReport()
       await this.fetchDailyReport()
@@ -412,15 +382,8 @@ export default {
 
       await this.$store.dispatch('application/fetch', params)
 
-      // let app = JSON.stringify(self.application)
-      // localStorage.setItem('application', app)
-      // let app = localStorage.getItem('application')
-      // this.application = JSON.parse(app)
-
       if (this.applications) {
         this.application = this.applications[0]
-        // let app = JSON.stringify(self.application)
-        // localStorage.setItem('application', app)
       }
 
       this.pursose = []
@@ -481,9 +444,6 @@ export default {
       let data = []
       if (self.series.length > 0) {
         self.series = []
-        // for (let i=0; i<3; i++) {
-        //   self.series[i].data = []
-        // }
       }
 
       let params = {
@@ -497,13 +457,18 @@ export default {
         .then((response) => {
           data = response.data
         })
-        .catch((error) => {})
+        .catch((error) => {
+          self.$toast.open({
+            message: error.response.data.message,
+            type: 'error',
+            duration: 6000
+          })
+        })
       if (data.length == 0) {
         this.$store.dispatch('loading/setLoading', false)
         return
       }
 
-      let categories = []
       let data_accept = []
       let data_reject = []
       let data_reconsent = []
@@ -520,8 +485,8 @@ export default {
         })
       })
 
-      await res.forEach(async e => {
-        await data.forEach(d => {
+      await res.forEach(e => {
+        data.forEach(d => {
           if (d.id == e.id) {
             e.data_reject = d.none_count
             e.data_reconsent = d.change_to_partial_count + d.change_to_all_count
@@ -529,8 +494,6 @@ export default {
           }
         })
       })
-
-      // console.log(res)
 
       await res.forEach((e, i) => {
         data_accept.push(e.data_accept)
@@ -605,7 +568,6 @@ export default {
       link.click()
     },
     exportPDFClick() {
-      // const doc = new jsPDF('l', 'pt', 'a4')
       let domain_name = this.application.domain_name
       const date = new Date();
       let now = this.$model.getDateInput(date)
@@ -620,8 +582,6 @@ export default {
         .then(function(dataUrl) {
           var img = new Image()
           img.src = dataUrl
-          // var logo = new Image()
-          // logo.src = './assets/img/logo-becookies.png'
           const doc = new jsPDF({
             orientation: 'landscape',
             unit: 'pt',
@@ -650,12 +610,6 @@ export default {
         .catch(function(error) {
           console.error("oops, something went wrong!", error);
         });
-      // let data = {
-      //   title: `report_consent_logs`,
-      //   title_text: `Report Consent Logs`
-      // }
-
-      // PDF.exportPDFReport(data)
     },
     changeSizeClick(size) {
       this.pageSize = size
@@ -666,26 +620,18 @@ export default {
         size: 2,
         nextPageID: this.more,
         application_id: this.application.id,
-        // toDate: this.toDate ? new Date(this.toDate).setUTCHours(24) : null,
-        // fromDate: this.fromDate
-        //   ? new Date(this.fromDate).setUTCHours(24)
-        //   : null,
       }
       await this.$api.getConsents(params).then((response) => {
         if (response.data.nextToken) this.more = response.data.nextToken
         else this.more = null
-        //  this.more = response.data.nextToken
-        var consent_logs = []
+        
         if (Array.isArray(response.data.entities)) {
           response.data.entities.forEach((e) => {
             this.consent_logs.push({
               ...e,
-              // CDNFingerprint: JSON.parse(e.CDNFingerprint),
-              // fingerprint: JSON.parse(e.fingerprint),
             })
           })
         }
-        // this.consent_logs.push(consent_logs)
       })
     },
     selectToDate() {
@@ -693,9 +639,7 @@ export default {
       this.fetchReport()
     },
     daysInMonth(m, y) {
-      let date = new Date(y, m, 0).getDate()
-
-      return date
+      return new Date(y, m, 0).getDate()
     }
   },
 }

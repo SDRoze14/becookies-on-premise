@@ -4,20 +4,20 @@
       v-if="!success"
       class="text-center text-2xl py-5 border-gray-100 border-b-2"
     >
-      {{ $t('lang') == 'en' ? 'Create New Password' : 'ตั้งค่ารหัสผ่านใหม่' }}
+      {{ $t('pass.reset.title') }}
     </div>
     <div
       v-if="success"
       class="text-center text-2xl py-5 border-gray-100 border-b-2"
     >
-      {{ $t('lang') == 'en' ? 'New Password Created' : 'ตั้งค่ารหัสผ่านใหม่สำเร็จ' }}
+      {{ $t('pass.reset.msg_success') }}
     </div>
 
     <div v-if="!success">
       <div class="py-4 w-full md:w-1/2 mx-auto">
         <div class="py-3">
           <base-input
-            :label="$t('lang') == 'en' ? 'New Password*' : 'รหัสผ่านใหม่'"
+            :label="$t('pass.reset.new')"
             placeholder="********"
             type="password"
             v-model="password"
@@ -27,9 +27,7 @@
         <div class="py-3">
           <base-input
             :label="
-              $t('lang') == 'en'
-                ? 'Confirm New Password*'
-                : 'ยืนยันรหัสผ่านใหม่'
+              $t('pass.reset.confirm')
             "
             placeholder="********"
             type="password"
@@ -44,7 +42,7 @@
 
       <div class="text-center py-2 mx-auto">
         <base-button color="primary" @click="submitClick()">{{
-              $t('lang') == 'en' ? 'Submit' : 'ตกลง'
+              $t('pass.reset.btn_submit')
             }}</base-button>
       </div>
     </div>
@@ -63,7 +61,7 @@
         <base-button color="primary">
           <span class="text-white"
             ><a href="/login">{{
-              $t('lang') == 'en' ? 'Login' : 'เข้าสู่ระบบ'
+              $t('pass.reset.text_login')
             }}</a></span
           ></base-button
         >
@@ -91,10 +89,10 @@ export default {
       let self = this
       let error = ''
 
-      if (!self.password) error = 'Please enter new password'
-      else if (!self.confirm) error = 'Please enter confirm new password'
+      if (!self.password) error = self.$t('pass.reset.err_empty_new')
+      else if (!self.confirm) error = self.$t('pass.reset.err_empty_confirm')
       else if (self.password != self.confirm)
-        error = 'New password and confirm new password do not match'
+        error = self.$t('pass.reset.err_not_match')
 
       if (error) {
         self.error = error
@@ -108,7 +106,7 @@ export default {
         })
         .then((response) => {
           self.$toast.open({
-            message: self.$t('lang') == 'en' ? 'Reset password successfully' : 'เปลี่ยนรหัสผ่านเรียบร้อย',
+            message: self.$t('pass.reset.sucess'),
             type: 'success',
             duration: 6000,
           })
@@ -120,13 +118,13 @@ export default {
           self.$toast.open({
             message: error.response.data.message
               ? error.response.data.message
-              : self.$t('lang') == 'en' ? 'Something wrong. Please try again' : 'มีบางอย่างผิดพลาด โปรดลองอีกครั้ง',
+              : self.$t('pass.reset.somthing_wrong'),
             type: 'error',
             duration: 6000,
           })
           error = error.response.data.message
             ? error.response.data.message
-            : self.$t('lang') == 'en' ? 'Something wrong. Please try again' : 'มีบางอย่างผิดพลาด โปรดลองอีกครั้ง',
+            : self.$t('pass.reset.somthing_wrong')
           self.eror = error
           self.$store.dispatch('loading/setLoading', false)
         })

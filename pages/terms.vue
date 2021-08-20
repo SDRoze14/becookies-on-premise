@@ -2,9 +2,6 @@
   <div class="h-full">
     <div class="flex mx-2 sm:mx-24">
       <div class="px-2 sm:px-16 py-10 w-full bg-white mb-8 rounded-lg">
-        <!-- <div class="pb-5">
-          <button class="border hover:border-black rounded-full px-2 text-gray-400 hover:text-black" @click="backHomeClick()">Home</button>
-        </div> -->
         <p class="pb-8">beCOOKIES Terms and Conditions of Use</p>
 
         <p class="font-light pb-8">This terms and conditions of use (hereinafter referred to as the “Terms and Conditions”) defines the conditions between beCOOKIES (hereinafter referred to as the “beCOOKIES”) and users in regards to the use of software, applications, products, documents and other products and services (hereinafter referred to as the “Service”) provided to users under the “beCOOKIES” name.</p>

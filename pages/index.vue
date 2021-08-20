@@ -7,45 +7,26 @@
         </div>
         <div class="px-6 w-full sm:w-1/2">
           <h1 class="my-4 text-white leading-tight uppercase text-section1">
-            {{ $t('landing.sec1TitleBold') }}
-            <span class="font-normal"> {{ $t('landing.sec1TitleLigth') }}</span>
+            {{ $t("landing.sec1TitleBold") }}
+            <span class="font-normal"> {{ $t("landing.sec1TitleLigth") }}</span>
           </h1>
-          <!-- <div class="text-white text-cookies text-xl font-light">
-            {{ $t('landing.sec1Subtitle') }}
-          </div>
-          <div class="pt-10 flex">
-            <button
-              class="bg-white px-6 py-2 text-primary uppercase rounded-md focus:outline-none"
-            >
-              <nuxt-link v-if="logined" :to="{path: localePath('dashboard')}">{{ $t('landing.tryForFree') }}*</nuxt-link>
-              <nuxt-link v-else :to="{path: localePath('signup')}">{{ $t('landing.tryForFree') }}*</nuxt-link>
-            </button>
-          </div> -->
-          <!-- <div class="text-white font-light">
-            {{ $t('landing.regisBefore') }}
-          </div> -->
         </div>
       </div>
     </div>
 
-    <!-- <section class="bg-white">
-      <div class="container mx-auto py-12">
-        <div class="text-center uppercase text-4xl">
-          choose your plan
-        </div>
-      </div>
-    </section> -->
-
     <section class="bg-gray-200 border-b py-10">
       <div class="container mx-auto text-section2">
-        <p class="font-medium text-center text-xl pb-2" v-if="$t('lang') == 'en'">
-          {{$t('section2.title')}}
+        <p
+          class="font-medium text-center text-xl pb-2"
+          v-if="$t('lang') == 'en'"
+        >
+          {{ $t("section2.title") }}
         </p>
         <p class="font-normal text-center text-lg px-3">
-          {{$t('section2.text1')}}
+          {{ $t("section2.text1") }}
         </p>
         <p class="font-normal text-center text-lg px-3">
-          {{$t('section2.text2')}}
+          {{ $t("section2.text2") }}
         </p>
       </div>
     </section>
@@ -62,10 +43,12 @@
                 class="mx-auto py-5"
               />
               <div class="text-center text-xl font-medium pb-5">
-                {{ $t('section3.card1.title') }}
+                {{ $t("section3.card1.title") }}
               </div>
-              <div class="text-center text-lg font-normal px-0 md:px-16 text-gray-400">
-                {{ $t('section3.card1.subtitle') }}
+              <div
+                class="text-center text-lg font-normal px-0 md:px-16 text-gray-400"
+              >
+                {{ $t("section3.card1.subtitle") }}
               </div>
             </div>
           </div>
@@ -82,10 +65,10 @@
                 height=""
               />
               <div class="text-center text-xl font-medium pb-5">
-                {{ $t('section3.card2.title') }}
+                {{ $t("section3.card2.title") }}
               </div>
               <div class="text-center text-lg font-normal text-gray-400">
-                {{ $t('section3.card2.subtitle') }}
+                {{ $t("section3.card2.subtitle") }}
               </div>
             </div>
           </div>
@@ -99,10 +82,10 @@
                 class="mx-auto py-5"
               />
               <div class="text-center text-xl font-medium pb-5">
-                {{ $t('section3.card3.title') }}
+                {{ $t("section3.card3.title") }}
               </div>
               <div class="text-center text-lg font-normal text-gray-400">
-                {{ $t('section3.card3.subtitle') }}
+                {{ $t("section3.card3.subtitle") }}
               </div>
             </div>
           </div>
@@ -118,10 +101,12 @@
                 width="83"
               />
               <div class="text-center text-xl font-medium pb-5">
-                {{ $t('section3.card4.title') }}
+                {{ $t("section3.card4.title") }}
               </div>
-              <div class="text-center text-lg font-normal px-0 md:px-16 text-gray-400">
-                {{ $t('section3.card4.subtitle') }}
+              <div
+                class="text-center text-lg font-normal px-0 md:px-16 text-gray-400"
+              >
+                {{ $t("section3.card4.subtitle") }}
               </div>
             </div>
           </div>
@@ -134,10 +119,21 @@
         <div class="flex flex-wrap items-center">
           <div class="w-full lg:w-1/2 px-20">
             <div class="text-3xl text-white font-medium uppercase">
-              {{$t('lang')== 'en' ? 'Customize your banner' : 'ปรับแต่ง BANNER'}}
+              {{
+                $t("lang") == "en" ? "Customize your banner" : "ปรับแต่ง BANNER"
+              }}
             </div>
-            <div class="text-2xl text-white font-light" :class="$t('lang') == 'th' ? 'text-5xl text-white font-medium' : ''">
-              {{$t('lang') == 'en' ? 'Control are at your fingertips.' : '\"ง่าย\" แค่ปลายนิ้ว'}}
+            <div
+              class="text-2xl text-white font-light"
+              :class="
+                $t('lang') == 'th' ? 'text-5xl text-white font-medium' : ''
+              "
+            >
+              {{
+                $t("lang") == "en"
+                  ? "Control are at your fingertips."
+                  : '"ง่าย" แค่ปลายนิ้ว'
+              }}
             </div>
           </div>
 
@@ -169,23 +165,15 @@
               </div>
             </div>
           </div>
-
-          <!-- <div class="absolute right-0 top-0">
-            <img src="../assets/img/dialog.jpg" alt="" width="150" class="rounded-sm shadow-md img-dialog">
-          </div>
-          <div class="absolute right-0 top-0">
-            <img src="../assets/img/dialog.jpg" alt="" width="150" class="rounded-sm shadow-md img-dialog">
-          </div>
-          <div class="absolute right-0 top-0">
-            <img src="../assets/img/dialog.jpg" alt="" width="150" class="rounded-sm shadow-md img-dialog">
-          </div> -->
         </div>
       </div>
     </section>
 
     <section class="bg-white py-3">
       <div class="container mx-auto text-center">
-        <div class="text-3xl font bold">{{$t('lang') == 'en' ? 'WHY beCOOIKES?' : 'ทำไมต้อง beCOOKIES?'}}</div>
+        <div class="text-3xl font bold">
+          {{ $t("lang") == "en" ? "WHY beCOOIKES?" : "ทำไมต้อง beCOOKIES?" }}
+        </div>
       </div>
     </section>
 
@@ -193,87 +181,93 @@
       <div class="flex flex-wrap">
         <div class="w-full">
           <div class="flex flex-wrap">
-            <!-- <div> -->
-              <div class="text-center py-10 bg-gray-600 h-auto w-full lg:w-1/2 mx-auto text-white pb-10 px-12 xl:px-5 lg:px-20">
-                <span class="text-xl border border-white text1-border-section5"
-                  >1</span
-                >
-                <div class="text-xl pt-8 font-normal">
-                  {{ $t('sectionGray.box1.title') }}
-                </div>
-                <div class="font-light">
-                  {{ $t('sectionGray.box1.subtitle') }}
-                </div>
+            <div
+              class="text-center py-10 bg-gray-600 h-auto w-full lg:w-1/2 mx-auto text-white pb-10 px-12 xl:px-5 lg:px-20"
+            >
+              <span class="text-xl border border-white text1-border-section5"
+                >1</span
+              >
+              <div class="text-xl pt-8 font-normal">
+                {{ $t("sectionGray.box1.title") }}
               </div>
-              <div class="text-center py-10 bg-gray-500 h-auto w-full lg:w-1/2 mx-auto text-white pb-10 px-12 xl:px-5 lg:px-20">
-                <span class="text-xl border border-white text-border-section5"
-                  >2</span
-                >
-                <div class="text-xl pt-8 font-normal">
-                  {{ $t('sectionGray.box2.title') }}​
-                </div>
-                <div class="font-light">
-                  {{ $t('sectionGray.box2.subtitle') }}​​​
-                </div>
-              </div>
-            <!-- </div> -->
-          </div>
-        </div>
-        <div class="section5-right w-full">
-          <div class="flex flex-wrap">
-            <!-- <div> -->
-              <div class="text-center py-10 bg-gray-600 h-auto w-full lg:w-1/2 mx-auto text-white px-12 xl:px-5 lg:px-20">
-                <span class="text-xl border border-white text-border-section5"
-                  >3</span
-                >
-                <div class="text-xl pt-8 font-normal">
-                  {{ $t('sectionGray.box3.title') }}​
-                </div>
-                <div class="font-light">
-                  {{ $t('sectionGray.box3.subtitle') }}​​​​​​
-                </div>
-              </div>
-              <div class="text-center py-10 bg-gray-500 h-auto w-full lg:w-1/2 mx-auto text-white pb-10 px-12 xl:px-5 lg:px-20">
-                <span class="text-xl border border-white text4-border-section5"
-                  >4</span
-                >
-                <div class="text-xl pt-8 font-normal">
-                  {{ $t('sectionGray.box4.title') }}​
-                </div>
-                <div class="font-light">
-                  ​{{ $t('sectionGray.box4.subtitle') }}​​​​​​
-                </div>
-              </div>
-            <!-- </div> -->
-          </div>
-        </div>
-        <div class="section5-right w-full">
-          <div class="flex flex-wrap">
-            <!-- <div> -->
-              <div class="text-center py-10 bg-gray-600 h-auto w-full lg:w-1/2 mx-auto text-white pb-10 px-12 xl:px-5 lg:px-20">
-                <span class="text-xl border border-white text-border-section5"
-                  >5</span
-                >
-                <div class="text-xl pt-8 font-normal">
-                  {{ $t('sectionGray.box5.title') }}​​​
-                </div>
-                <div class="font-light">
-                  ​{{ $t('sectionGray.box5.subtitle') }}​​​​​​
-                </div>
-              </div>
-              <div class="text-center py-10 bg-gray-500 h-auto w-full lg:w-1/2 mx-auto text-white px-12 xl:px-5 lg:px-20">
-                <span class="text-xl border border-white text-border-section5"
-                  >6</span
-                >
-                <div class="text-xl pt-8 font-normal">
-                  {{ $t('sectionGray.box6.title') }}​​
-                </div>
-                <div class="font-light">
-                  ​{{ $t('sectionGray.box6.subtitle') }}​​​
-                </div>
+              <div class="font-light">
+                {{ $t("sectionGray.box1.subtitle") }}
               </div>
             </div>
-          <!-- </div> -->
+            <div
+              class="text-center py-10 bg-gray-500 h-auto w-full lg:w-1/2 mx-auto text-white pb-10 px-12 xl:px-5 lg:px-20"
+            >
+              <span class="text-xl border border-white text-border-section5"
+                >2</span
+              >
+              <div class="text-xl pt-8 font-normal">
+                {{ $t("sectionGray.box2.title") }}​
+              </div>
+              <div class="font-light">
+                {{ $t("sectionGray.box2.subtitle") }}​​​
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section5-right w-full">
+          <div class="flex flex-wrap">
+            <div
+              class="text-center py-10 bg-gray-600 h-auto w-full lg:w-1/2 mx-auto text-white px-12 xl:px-5 lg:px-20"
+            >
+              <span class="text-xl border border-white text-border-section5"
+                >3</span
+              >
+              <div class="text-xl pt-8 font-normal">
+                {{ $t("sectionGray.box3.title") }}​
+              </div>
+              <div class="font-light">
+                {{ $t("sectionGray.box3.subtitle") }}​​​​​​
+              </div>
+            </div>
+            <div
+              class="text-center py-10 bg-gray-500 h-auto w-full lg:w-1/2 mx-auto text-white pb-10 px-12 xl:px-5 lg:px-20"
+            >
+              <span class="text-xl border border-white text4-border-section5"
+                >4</span
+              >
+              <div class="text-xl pt-8 font-normal">
+                {{ $t("sectionGray.box4.title") }}​
+              </div>
+              <div class="font-light">
+                ​{{ $t("sectionGray.box4.subtitle") }}​​​​​​
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section5-right w-full">
+          <div class="flex flex-wrap">
+            <div
+              class="text-center py-10 bg-gray-600 h-auto w-full lg:w-1/2 mx-auto text-white pb-10 px-12 xl:px-5 lg:px-20"
+            >
+              <span class="text-xl border border-white text-border-section5"
+                >5</span
+              >
+              <div class="text-xl pt-8 font-normal">
+                {{ $t("sectionGray.box5.title") }}​​​
+              </div>
+              <div class="font-light">
+                ​{{ $t("sectionGray.box5.subtitle") }}​​​​​​
+              </div>
+            </div>
+            <div
+              class="text-center py-10 bg-gray-500 h-auto w-full lg:w-1/2 mx-auto text-white px-12 xl:px-5 lg:px-20"
+            >
+              <span class="text-xl border border-white text-border-section5"
+                >6</span
+              >
+              <div class="text-xl pt-8 font-normal">
+                {{ $t("sectionGray.box6.title") }}​​
+              </div>
+              <div class="font-light">
+                ​{{ $t("sectionGray.box6.subtitle") }}​​​
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -283,19 +277,33 @@
         <div class="">
           <div class="text-center">
             <div class="text-2xl text-white font-medium">
-              <div v-if="$t('lang') == 'en'">Design Popup in <span class="text-5xl underline">3</span> steps</div>
-              <div v-if="$t('lang') == 'th'">สร้าง Popup ใน <span class="text-5xl underline">3</span> ขั้นตอนง่ายๆ</div>
+              <div v-if="$t('lang') == 'en'">
+                Design Popup in <span class="text-5xl underline">3</span> steps
+              </div>
+              <div v-if="$t('lang') == 'th'">
+                สร้าง Popup ใน
+                <span class="text-5xl underline">3</span> ขั้นตอนง่ายๆ
+              </div>
             </div>
           </div>
-          <div class="flex justify-between md:items-center pl-5 md:px-0 flex-col md:flex-row">
+          <div
+            class="flex justify-between md:items-center pl-5 md:px-0 flex-col md:flex-row"
+          >
             <div class="flex px-2 ld:px-20 py-3">
               <div>
-                <div class="w-12 text-center text-3xl bg-white rounded-full my-2">1</div>
+                <div
+                  class="w-12 text-center text-3xl bg-white rounded-full my-2"
+                >
+                  1
+                </div>
                 <base-icon icon="landing-register" size="50"></base-icon>
               </div>
               <div class="mt-auto px-3 text-white">
-                <div class="text-lg">{{$t('sectionStep.step1.title')}} </div>
-                <div class="text-lg font-light">{{$t('sectionStep.step1.subtitle')}} <a href="https://becookies.tech/signup">becookies.tech</a></div>
+                <div class="text-lg">{{ $t("sectionStep.step1.title") }}</div>
+                <div class="text-lg font-light">
+                  {{ $t("sectionStep.step1.subtitle") }}
+                  <a href="https://becookies.tech/signup">becookies.tech</a>
+                </div>
               </div>
             </div>
 
@@ -305,12 +313,18 @@
 
             <div class="flex px-2 ld:px-20 py-3">
               <div>
-                <div class="w-12 text-center text-3xl bg-white rounded-full my-2">2</div>
+                <div
+                  class="w-12 text-center text-3xl bg-white rounded-full my-2"
+                >
+                  2
+                </div>
                 <base-icon icon="landing-customize" size="50"></base-icon>
               </div>
               <div class="mt-auto px-3 text-white">
-                <div class="text-lg">{{$t('sectionStep.step2.title')}}</div>
-                <div class="text-lg font-light">{{$t('sectionStep.step2.subtitle')}}</div>
+                <div class="text-lg">{{ $t("sectionStep.step2.title") }}</div>
+                <div class="text-lg font-light">
+                  {{ $t("sectionStep.step2.subtitle") }}
+                </div>
               </div>
             </div>
 
@@ -320,75 +334,99 @@
 
             <div class="flex px-2 ld:px-20 py-3">
               <div>
-                <div class="w-12 text-center text-3xl bg-white rounded-full my-2">3</div>
+                <div
+                  class="w-12 text-center text-3xl bg-white rounded-full my-2"
+                >
+                  3
+                </div>
                 <base-icon icon="landing-copy" size="50"></base-icon>
               </div>
               <div class="mt-auto px-3 text-white">
-                <div class="text-lg">{{$t('sectionStep.step3.title')}}</div>
-                <div class="text-lg font-light">{{$t('sectionStep.step3.subtitle')}}</div>
+                <div class="text-lg">{{ $t("sectionStep.step3.title") }}</div>
+                <div class="text-lg font-light">
+                  {{ $t("sectionStep.step3.subtitle") }}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- <section class="bg-white w-full text-center items-center py-10">
-      <div class="container mx-auto px-12 py-6">
-        <h1 class="text-xl lg:text-2xl mb-5">
-          {{$t('sectionSum.text')}}
-        </h1>
-        <nuxt-link v-if="!logined" :to="localePath('signup')" class="">
-          <base-button class="text-xl">{{$t('lang') == 'en'? 'Let beCOOKIES Make it Simple' : 'ให้ beCOOKIES ช่วยท่าน' }}</base-button>
-        </nuxt-link>
-        <nuxt-link v-else :to="localePath('dashboard')" class="">
-          <base-button class="text-xl">{{$t('lang') == 'en'? 'Let beCOOKIES Make it Simple' : 'ให้ beCOOKIES ช่วยท่าน' }}</base-button>
-        </nuxt-link>
-      </div>
-    </section> -->
 
     <section class="bg-blue-50 w-full items-center py-10">
       <div class="container mx-auto px-12">
         <div class="flex items-center">
           <div class="w-full md:w-1/2">
-            <div class="text-sm sm:text-lg">{{$t('sectionPartner.text')}}</div>
-            <div class="text-xl sm:text-3xl">{{$t('sectionPartner.highlight')}}</div>
+            <div class="text-sm sm:text-lg">
+              {{ $t("sectionPartner.text") }}
+            </div>
+            <div class="text-xl sm:text-3xl">
+              {{ $t("sectionPartner.highlight") }}
+            </div>
           </div>
-          <div class="flex flex-wrap w-full md:w-1/2 pl-0 md:pl-12 justify-center lg:justify-between items-center center">
-            <!-- <img src="../assets/img/1-logo-tistr.png" height="50" alt="" class="pb-10"> -->
-            <img src="../assets/img/2-logo-tcas.png" height="50" alt="" class="py-5">
-            <img src="../assets/img/7-logo-bigfm.png" height="50" alt="" class="py-5">
-            <img src="../assets/img/4-logo-betime.png" height="50" alt="" class="py-5">
-            <img src="../assets/img/6-logo-looktung.png" height="50" alt="" class="py-5">
-            <img src="../assets/img/3-logo-ioaday.png" height="50" width="170" alt="" class="py-5">
-            <img src="../assets/img/5-logo-rst.png" height="50" alt="" class="py-5">
-            <img src="../assets/img/8-logo-insecure.png" height="50" alt="" class="py-5">
+          <div
+            class="flex flex-wrap w-full md:w-1/2 pl-0 md:pl-12 justify-center lg:justify-between items-center center"
+          >
+            <img
+              src="../assets/img/2-logo-tcas.png"
+              height="50"
+              alt=""
+              class="py-5"
+            />
+            <img
+              src="../assets/img/7-logo-bigfm.png"
+              height="50"
+              alt=""
+              class="py-5"
+            />
+            <img
+              src="../assets/img/4-logo-betime.png"
+              height="50"
+              alt=""
+              class="py-5"
+            />
+            <img
+              src="../assets/img/6-logo-looktung.png"
+              height="50"
+              alt=""
+              class="py-5"
+            />
+            <img
+              src="../assets/img/3-logo-ioaday.png"
+              height="50"
+              width="170"
+              alt=""
+              class="py-5"
+            />
+            <img
+              src="../assets/img/5-logo-rst.png"
+              height="50"
+              alt=""
+              class="py-5"
+            />
+            <img
+              src="../assets/img/8-logo-insecure.png"
+              height="50"
+              alt=""
+              class="py-5"
+            />
           </div>
         </div>
       </div>
     </section>
-
-    <!-- <script
-      id="gsoftbiz.pdpa-scripts"
-      async
-      src="https://staging.propdpa.com/script.js"
-      data-id="1b0c3ef0-3b72-11eb-99ea-8919530a02db"
-      charset="utf-8"
-    ></script> -->
   </div>
 </template>
 
 <script>
 export default {
-  layout: 'landing',
+  layout: "landing",
   computed: {
     logined() {
-      let token = localStorage.getItem('token')
-      if (token) return true
-      else return false
-    }
-  }
-}
+      let token = localStorage.getItem("token");
+      return (token) ? true : false
+    },
+  },
+};
 </script>
 
 <style>
