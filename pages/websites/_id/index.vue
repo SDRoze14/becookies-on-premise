@@ -1613,7 +1613,7 @@ export default {
         })
       })
       
-      const language = {}
+      let language = {}
       language = {
         key: lang,
         title: contents.banner.title[lang],
