@@ -23,7 +23,6 @@ export default function ({ $axios, store, redirect, req, res }) {
 
             // add Authorization header
             if (config.headers.Authorization) {
-              let user = store.state.me
               let token = localStorage.getItem('token')
               config.headers.Authorization = `Bearer ${token}`
               resolve(config)
@@ -74,11 +73,11 @@ export default function ({ $axios, store, redirect, req, res }) {
                 },
               }
             )
-            .then(async ({ data }) => {
-              await store.commit('me/SET_TOKEN', data.access_token)
-              await localStorage.setItem('token', data.access_token)
-              await store.commit('me/SET_REFRESH_TOKEN', data.refresh_token)
-              await localStorage.setItem('refresh_token', data.refresh_token)
+            .then(({ data }) => {
+              store.commit('me/SET_TOKEN', data.access_token)
+              localStorage.setItem('token', data.access_token)
+              store.commit('me/SET_REFRESH_TOKEN', data.refresh_token)
+              localStorage.setItem('refresh_token', data.refresh_token)
               console.log('renew token success')
 
               PENDING_REQUESTS = Math.max(0, PENDING_REQUESTS - 1)
@@ -88,12 +87,12 @@ export default function ({ $axios, store, redirect, req, res }) {
               err.config.headers.Authorization = `Bearer ${token}`
               return resolve($axios(err.config))
             })
-            .catch(async (err) => {
-              console.log('renew token error:', err)
+            .catch((error) => {
+              console.log('renew token error:', error)
 
               PENDING_REQUESTS = Math.max(0, PENDING_REQUESTS - 1)
 
-              await store.commit('me/CLEAR_USER')
+              store.commit('me/CLEAR_USER')
               // await redirect('/login')
               redirect('login')
               return reject(err)

@@ -29,13 +29,6 @@
               @click="searchClick"
             />
           </div>
-          <!-- <div class="flex items-center">
-            
-            <div class="flex items-center w-64">
-              <div class="text-sm ml-4 pr-4 text-gray-400">Organizations</div>
-              <select-organizations :select_id="organization.id" @change="selectOrganization"></select-organizations>
-            </div>
-          </div> -->
         </div>
         <div class="flex items-center space-x-4">
           <div class="text-sm font-light text-gray-500">Sort by</div>
@@ -90,39 +83,17 @@
         >
       </div>
       <div v-else class="flex flex-wrap -mx-2">
-        <!-- {{applications}} -->
         <div
           v-for="(app, i) in applications"
           :key="`application-${i}`"
           class="w-full md:w-1/2 lg:w-1/3 p-2"
         >
           <div class="border border-gray-100 shadow-sm p-2 rounded px-4 py-4">
-            <!-- <div class="text-gray-400 font-light text-sm mb-2 truncate">
-              {{ app.name ? app.name : 'unnamed' }}
-            </div> -->
             <div class="text-lg text-primary mb-4 truncate">
               <router-link class="" :to="localePath(`/websites/${app.id}`)"
                 >{{ app.domain_name }}
               </router-link>
             </div>
-            <!-- <div class="font-light mb-1">
-              Discovery:
-              <span
-                v-if="app.status == 1"
-                class="bg-green-100 rounded px-3 py-1 text-xs text-green-400 ml-2"
-                >Scanning</span
-              >
-              <span
-                v-if="app.status == 2"
-                class="bg-green-100 rounded px-3 py-1 text-xs text-green-400 ml-2"
-                >Completed</span
-              >
-              <span
-                v-if="app.status == 3"
-                class="bg-green-100 rounded px-3 py-1 text-xs text-green-400 ml-2"
-                >Disable</span
-              >
-            </div> -->
             <div class="font-light mb-1">
               Found:
               <span class="text-sm text-gray-400 ml-2">
@@ -137,12 +108,6 @@
                   {{ $model.getDate(app.created_at) }}
                 </span>
               </div>
-              <!-- <div class="ml-6">
-                Next:
-                <span class="text-sm text-gray-400 ml-2">{{
-                  $model.getDate(app.nextScan)
-                }}</span>
-              </div> -->
             </div>
             <div class="font-light mb-4 flex">
               <div>
@@ -151,12 +116,6 @@
                   {{ $model.getDate(app.updated_at) }}
                 </span>
               </div>
-              <!-- <div class="ml-6">
-                Next:
-                <span class="text-sm text-gray-400 ml-2">{{
-                  $model.getDate(app.nextScan)
-                }}</span>
-              </div> -->
             </div>
 
             <!-- footer -->
@@ -200,14 +159,12 @@
 <script>
 import ManageDomain from '@/components/domain/manage-domain'
 import ScriptShow from '@/components/domain/script-show'
-// import SelectOrganizations from '@/components/organizations/select-organizations'
 
 export default {
   middleware: 'auth',
   components: {
     ManageDomain,
     ScriptShow,
-    // SelectOrganizations,
   },
   computed: {
     organizations_id() {
@@ -218,19 +175,10 @@ export default {
       var list = this.$store.getters['application/getList']
       if (self.q) {
         list = list.filter((e) => {
-          if (e.domain_name.toLowerCase().search(self.q.toLowerCase()) > -1)
-            return true
-          else return false
+          return (e.domain_name.toLowerCase().search(self.q.toLowerCase()) > -1)
+            ? true : false
         })
       }
-
-      // list.forEach(async e => {
-      //   // await self.$api.getSummary(e.id)
-      //   // .then(response => {
-      //   //   e.cookie_counts = response.data.cookie_counts
-      //   // })
-      //   e.cookie_counts = e.cookie_counts
-      // })
 
       return list
     },
@@ -310,8 +258,6 @@ export default {
         async function () {
           self.$store.dispatch('loading/setLoading', true)
           await self.$api.deleteApplication(app.id)
-            .then(() => {})
-            .catch(() => {})
           self.fetch()
         }
       )

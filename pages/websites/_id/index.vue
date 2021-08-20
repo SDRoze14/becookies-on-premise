@@ -1491,7 +1491,9 @@ export default {
             ...response.data,
           }
         })
-        .catch((error) => {})
+        .catch((error) => {
+          console.log(error.response.data)
+        })
       await self.$api.getSummary(self.id).then((response) => {
         self.application.cookie_counts = response.data.cookie_counts
       })
@@ -1878,8 +1880,8 @@ export default {
                   : self.categoriesSelect[i].default,
             }
           consentRules[c.key].title[l.key] = c.title
-          ;(consentRules[c.key].description[l.key] = c.description)
-            (consentRules[c.key].id = c.id)
+          consentRules[c.key].description[l.key] = c.description
+          consentRules[c.key].id = c.id
         })
       })
       data.categories = consentRules
@@ -1940,7 +1942,6 @@ export default {
 
         await self.$api
           .updateTemplateLogo(self.id, data_img)
-          .then((response) => {})
           .catch((err) => {
             self.$toast.open({
               message: err.response.data.message,

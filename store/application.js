@@ -24,6 +24,8 @@ export const actions = {
       .then(async (response) => {
         await commit('SET_LIST', response.data.entities)
       })
-      .catch((error) => {})
+      .catch((error) => {
+        console.log(error.response.data)
+      })
   },
 }

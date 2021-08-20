@@ -54,9 +54,6 @@
         width="300"
         alt=""
       />
-      <!-- <div class="text-center text-sm text-gray-500">
-        {{$t('lang') == 'en' ? 'Please login agian.' : 'เปลี่ยนรหัสผ่านสำเร็จ กรุณาเข้าสู่ระบบอีกครั้ง'}}
-      </div> -->
       <div class="text-center py-3 text-gray-500">
         <base-button color="primary">
           <span class="text-white"
@@ -114,16 +111,16 @@ export default {
           self.success = true
           self.$store.dispatch('loading/setLoading', false)
         })
-        .catch((error) => {
+        .catch((err) => {
           self.$toast.open({
-            message: error.response.data.message
-              ? error.response.data.message
+            message: err.response.data.message
+              ? err.response.data.message
               : self.$t('pass.reset.somthing_wrong'),
             type: 'error',
             duration: 6000,
           })
-          error = error.response.data.message
-            ? error.response.data.message
+          error = err.response.data.message
+            ? err.response.data.message
             : self.$t('pass.reset.somthing_wrong')
           self.eror = error
           self.$store.dispatch('loading/setLoading', false)

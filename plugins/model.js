@@ -77,7 +77,6 @@ let cookie_type = [
 ]
 
 import dayjs from 'dayjs'
-import th from 'dayjs/locale/th'
 // require()
 
 export default ({ app }, inject) => {

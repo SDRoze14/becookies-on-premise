@@ -52,7 +52,7 @@
             <th id="expiry">Expiry</th>
             <th id="type">Type</th>
             <th id="category">Category</th>
-            <th></th>
+            <th id="manage"></th>
           </thead>
           <tbody class="divide-y divide-white">
             <tr

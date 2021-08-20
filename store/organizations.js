@@ -10,8 +10,7 @@ export const getters = {
     return state.list
   },
   getOrganizationId: (state) => {
-    const organization_id = localStorage.getItem('organization_id') || state.refresh_token
-    return organization_id
+    return localStorage.getItem('organization_id') || state.refresh_token
   }
 }
 
@@ -34,6 +33,8 @@ export const actions = {
         await commit('SET_LIST', response.data)
         // await commit('SET_ORGANIZATION_ID', response.data[0].id)
       })
-      .catch((error) => {})
+      .catch((error) => {
+        return error
+      })
   },
 }

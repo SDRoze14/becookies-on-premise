@@ -22,19 +22,11 @@ export const actions = {
     return await self.$api
       .getCookies(params)
       .then(async (response) => {
-        // var list = response.data.entities
-        // list.forEach((c) => {
-        //   if (
-        //     c.cookieId == 'becookies-submitted' ||
-        //     c.cookieId == 'becookies.clientId' ||
-        //     c.cookieId == 'becookies.consentId'
-        //   )
-        //     c.editable = false
-        //   else c.editable = true
-        // })
         await commit('SET_LIST', response.data.entities)
       })
-      .catch((error) => {})
+      .catch((error) => {
+        return error
+      })
   },
   async fetchAll({ commit }, params) {
     const self = this
@@ -43,6 +35,8 @@ export const actions = {
       .then(async (response) => {
         await commit('SET_LIST', response.data)
       })
-      .catch((error) => {})
+      .catch((error) => {
+        return error
+      })
   },
 }

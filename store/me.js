@@ -10,12 +10,10 @@ export const state = () => {
 
 export const getters = {
   getToken: (state) => {
-    const at = localStorage.getItem('token') || state.token
-    return at
+    return localStorage.getItem('token') || state.token
   },
   getRefreshToken: (state) => {
-    const at = localStorage.getItem('refresh_token') || state.refresh_token
-    return at
+    return localStorage.getItem('refresh_token') || state.refresh_token
   },
 
   getUser: (state) => {
@@ -24,12 +22,10 @@ export const getters = {
     return u
   },
   getIsShowMenuToggle: (state) => {
-    const isShowMenuToggle = state.isShowMenuToggle
-    return isShowMenuToggle
+    return state.isShowMenuToggle
   },
   getRole: (state) => {
-    const role = localStorage.getItem('role') || state.role
-    return role
+    return localStorage.getItem('role') || state.role
   }
 }
 
@@ -121,7 +117,7 @@ export const actions = {
       })
   },
 
-  async logout({ commit, getters }) {
+  async logout({ commit }) {
     await commit('CLEAR_USER')
   },
 }
